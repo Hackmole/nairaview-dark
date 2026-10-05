@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>try{var t=localStorage.getItem("nv-theme");document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#087a4b" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="description" content="Prototype: TradingView-style charts rendered with Nairaview's own market data. Not linked in site navigation." />
+  <link rel="icon" href="assets/logo-icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="assets/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <title>Chart Lab — TradingView-style prototype | Nairaview</title>
+  <link rel="stylesheet" href="assets/styles.css?v=20261005dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .tv-wrap{position:relative;height:440px;border:1px solid var(--line,#e5e7eb);border-radius:14px;overflow:hidden;background:var(--card,#fff)}
+    .tv-wrap .tv-err{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:var(--muted,#6b7280)}
+    .tv-pane{height:170px;margin-top:12px}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+    .pill-row button{border:1px solid var(--line,#e5e7eb);background:var(--card,#fff);color:var(--ink,#111827);border-radius:999px;padding:8px 14px;font:600 13px/1.2 "Public Sans",system-ui,sans-serif;cursor:pointer}
+    .pill-row button[aria-pressed="true"]{background:#087a4b;border-color:#087a4b;color:#fff}
+    .pill-row .row-label{align-self:center;font:600 12px/1 "Public Sans",system-ui,sans-serif;color:var(--muted,#6b7280);text-transform:uppercase;letter-spacing:.06em;margin-right:2px}
+    .lab-note{font-size:13px;color:var(--muted,#6b7280);margin-top:10px}
+    .lab-search{display:flex;align-items:center;gap:10px;margin:16px 0 2px}
+    .lab-search label{font:600 13px/1.2 "Public Sans",system-ui,sans-serif;color:var(--ink,#111827)}
+    .lab-search input{flex:1;max-width:340px;border:1px solid var(--line,#e5e7eb);border-radius:999px;padding:9px 15px;font:500 13px "Public Sans",system-ui,sans-serif;background:var(--card,#fff);color:var(--ink,#111827)}
+    .lab-search input::placeholder{color:var(--muted,#6b7280)}
+    @media (max-width:640px){.tv-wrap{height:340px}.tv-pane{height:150px}.lab-search input{max-width:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="Nairaview home"><picture><source srcset="assets/logo-dark.svg" media="(prefers-color-scheme: dark)"><img src="assets/logo.svg" alt="Nairaview" height="34"></picture></a>
+      <nav class="site-nav" aria-label="Primary">
+          <a href="./">Home</a>
+          <a href="./stocks">Stocks</a>
+          <a href="./screener">Screener</a>
+          <a href="./offers">Offers</a>
+          <a href="./calendar">Calendar</a>
+          <a href="./news">News</a>
+          <a href="./learn">Learn</a>
+          <a href="./market-recap">Recap</a>
+      </nav>
+    </div>
+  </header>
+  <div class="shell">
+    <div class="topline">
+      <span class="status"><i class="status-dot" aria-hidden="true"></i> PROTOTYPE</span>
+      <span class="topline-date">CHART LAB &middot; NOT IN SITE NAV</span>
+    </div>
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <p class="kicker">PROTOTYPE &middot; TRADINGVIEW LIGHTWEIGHT CHARTS</p>
+          <h1>Chart lab</h1>
+          <p class="lede">TradingView&rsquo;s open-source charting library, rendering <strong>Nairaview&rsquo;s own market data</strong> &mdash; no TradingView branding, no third-party data. Search any ticker, slice by timeframe, and layer on indicators:</p>
+        </div>
+        <div class="lab-search">
+          <label for="sym-search">Symbol</label>
+          <input id="sym-search" list="sym-list" placeholder="Type a ticker, e.g. GTCO" autocomplete="off" spellcheck="false">
+          <datalist id="sym-list"></datalist>
+        </div>
+        <p class="lab-note" id="search-note" hidden></p>
+        <div class="pill-row" id="sym-row" role="group" aria-label="Stock symbol">
+          <span class="row-label">Quick picks</span>
+          <button data-sym="DANGCEM" aria-pressed="true">DANGCEM</button>
+          <button data-sym="GTCO" aria-pressed="false">GTCO</button>
+          <button data-sym="MTNN" aria-pressed="false">MTNN</button>
+          <button data-sym="ZENITHBANK" aria-pressed="false">ZENITHBANK</button>
+          <button data-sym="ACCESSCORP" aria-pressed="false">ACCESSCORP</button>
+          <button data-sym="SEPLAT" aria-pressed="false">SEPLAT</button>
+        </div>
+        <div class="pill-row" id="tf-row" role="group" aria-label="Timeframe">
+          <span class="row-label">Range</span>
+          <button data-tf="all" aria-pressed="true">All</button>
+          <button data-tf="3m" aria-pressed="false">3M</button>
+          <button data-tf="1m" aria-pressed="false">1M</button>
+        </div>
+        <div class="pill-row" id="type-row" role="group" aria-label="Chart type">
+          <span class="row-label">Style</span>
+          <button data-type="candles" aria-pressed="true">Candlesticks</button>
+          <button data-type="area" aria-pressed="false">Area</button>
+        </div>
+        <div class="pill-row" id="ind-row" role="group" aria-label="Indicators">
+          <span class="row-label">Indicators</span>
+          <button data-ind="sma5" aria-pressed="false">SMA 5</button>
+          <button data-ind="sma20" aria-pressed="false">SMA 20</button>
+          <button data-ind="rsi" aria-pressed="false">RSI 14</button>
+          <button data-ind="macd" aria-pressed="false">MACD</button>
+          <button data-ind="compare" aria-pressed="false">Compare vs ASI</button>
+        </div>
+        <p class="lab-note" id="ind-note" hidden></p>
+        <div class="tv-wrap" id="tv-chart"><div class="tv-err" id="tv-err">Loading chart&hellip;</div></div>
+        <p class="asof" id="stock-asof"></p>
+        <div class="tv-wrap tv-pane" id="rsi-wrap" hidden></div>
+        <p class="lab-note" id="rsi-cap" hidden></p>
+        <div class="tv-wrap tv-pane" id="macd-wrap" hidden></div>
+        <p class="lab-note" id="macd-cap" hidden></p>
+
+        <div class="section-heading" style="margin-top:34px">
+          <p class="kicker">NGX ALL-SHARE INDEX</p>
+          <h2 class="guide-h2">ASI &mdash; 120 sessions</h2>
+        </div>
+        <div class="tv-wrap" id="tv-asi"><div class="tv-err" id="asi-err">Loading chart&hellip;</div></div>
+        <p class="asof" id="asi-asof"></p>
+        <p class="lab-note">Prototype page for review &mdash; not linked anywhere in the site navigation or sitemap, and excluded from search indexing. Data: Nairaview market feed (NGX Pulse), daily closes.</p>
+      </section>
+    </main>
+    </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="./" aria-label="Nairaview home"><img src="assets/logo-dark.svg" alt="Nairaview" height="34"></a>
+          <p>The Nigerian Exchange, decoded daily. Prices, movers, offers, news and plain-language guides.</p>
+          <a class="footer-x" href="https://x.com/naira_view" target="_blank" rel="noopener" aria-label="Nairaview on X"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+        <div class="footer-col">
+          <h4>Markets</h4>
+          <a href="stocks">All listed stocks</a>
+          <a href="screener">Stock screener</a>
+          <a href="offers">Public offers</a>
+          <a href="calendar">Market calendar</a>
+          <a href="fx">Dollar / naira</a>
+        </div>
+        <div class="footer-col">
+          <h4>Nairaview</h4>
+          <a href="news">Market news</a>
+          <a href="learn">Learn</a>
+          <a href="portfolio">Portfolio tracker</a>
+          <a href="market-recap">Weekly recap</a>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; 2026 Nairaview. information only, not investment advice.</span>
+        <span>Market data is delayed. Prices may have changed, confirm before acting.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/vendor/lightweight-charts.standalone.production.js"></script>
+  <script src="assets/site.js?v=20261005dark"></script>
+  <script>
+  (function(){
+    "use strict";
+    var API = "https://nairaview-api.meetomidiora.workers.dev";
+    if (!window.LightweightCharts) return;
+    var LW = window.LightweightCharts;
+
+    function isDark(){
+      var t = null;
+      try { t = document.documentElement.getAttribute("data-theme"); } catch(e){}
+      if (t === "dark") return true;
+      if (t === "light") return false;
+      return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    function themeOpts(){
+      var dark = isDark();
+      return {
+        layout: {
+          background: { type: "solid", color: "transparent" },
+          textColor: dark ? "#c9d4e3" : "#3c4756",
+          fontFamily: "'Public Sans', system-ui, sans-serif",
+          fontSize: 12
+        },
+        grid: {
+          vertLines: { color: dark ? "rgba(255,255,255,0.06)" : "rgba(15,23,42,0.06)" },
+          horzLines: { color: dark ? "rgba(255,255,255,0.06)" : "rgba(15,23,42,0.06)" }
+        },
+        crosshair: {
+          vertLine: { color: dark ? "#5b6b85" : "#94a3b8", labelBackgroundColor: "#087a4b" },
+          horzLine: { color: dark ? "#5b6b85" : "#94a3b8", labelBackgroundColor: "#087a4b" }
+        },
+        rightPriceScale: { borderColor: dark ? "rgba(255,255,255,0.12)" : "rgba(15,23,42,0.12)" },
+        timeScale: { borderColor: dark ? "rgba(255,255,255,0.12)" : "rgba(15,23,42,0.12)", timeVisible: false }
+      };
+    }
+    var UP = "#16a34a", DOWN = "#dc2626";
+
+    function fmtDate(iso){
+      var d = new Date(iso + "T12:00:00Z");
+      var M = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      return d.getUTCDate() + " " + M[d.getUTCMonth()] + " " + d.getUTCFullYear();
+    }
+    function money(n){
+      return "\u20A6" + Number(n).toLocaleString("en-NG", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    }
+
+    /* ---------- state ---------- */
+    var sym = "DANGCEM", ctype = "candles", tf = "all";
+    var ind = { sma5: false, sma20: false, rsi: false, macd: false, compare: false };
+    var stockData = [];   /* raw fetched prices for the current symbol */
+    var asiData = [];     /* cached ASI history [{date, value}] */
+    var asiReady = false;
+    var knownSyms = {};   /* uppercase symbol -> true, for the search box */
+
+    /* ---------- indicator math (plain JS, length-adaptive) ---------- */
+    function sma(values, n){
+      var out = [], i, j, s;
+      for (i = 0; i < values.length; i++){
+        if (i < n - 1){ out.push(null); continue; }
+        s = 0;
+        for (j = i - n + 1; j <= i; j++) s += values[j];
+        out.push(s / n);
+      }
+      return out;
+    }
+    function rsiWilder(closes, period){
+      var out = [], i, d, g, l, dd, gg, ll, k;
+      for (i = 0; i < closes.length; i++) out.push(null);
+      if (closes.length < period + 1) return out;
+      g = 0; l = 0;
+      for (i = 1; i <= period; i++){
+        d = closes[i] - closes[i - 1];
+        if (d > 0) g += d; else l -= d;
+      }
+      g /= period; l /= period;
+      out[period] = (l === 0) ? 100 : 100 - (100 / (1 + g / l));
+      for (k = period + 1; k < closes.length; k++){
+        dd = closes[k] - closes[k - 1];
+        gg = dd > 0 ? dd : 0; ll = dd < 0 ? -dd : 0;
+        g = (g * (period - 1) + gg) / period;
+        l = (l * (period - 1) + ll) / period;
+        out[k] = (l === 0) ? 100 : 100 - (100 / (1 + g / l));
+      }
+      return out;
+    }
+    function ema(values, n){
+      var out = [], i, j, e, k;
+      for (i = 0; i < values.length; i++) out.push(null);
+      if (values.length < n) return out;
+      k = 2 / (n + 1); e = 0;
+      for (j = 0; j < n; j++) e += values[j];
+      e /= n; out[n - 1] = e;
+      for (j = n; j < values.length; j++){ e = values[j] * k + e * (1 - k); out[j] = e; }
+      return out;
+    }
+    function macdCalc(closes){
+      var e12 = ema(closes, 12), e26 = ema(closes, 26);
+      var line = [], signal = [], i, s, vals = [], idx = [], sigE;
+      for (i = 0; i < closes.length; i++){
+        line.push((e12[i] === null || e26[i] === null) ? null : e12[i] - e26[i]);
+        signal.push(null);
+      }
+      for (i = 0; i < line.length; i++){ if (line[i] !== null){ vals.push(line[i]); idx.push(i); } }
+      sigE = ema(vals, 9);
+      for (s = 0; s < vals.length; s++){ if (sigE[s] !== null) signal[idx[s]] = sigE[s]; }
+      return { line: line, signal: signal };
+    }
+
+    /* ---------- stock chart ---------- */
+    var chartEl = document.getElementById("tv-chart");
+    var errEl = document.getElementById("tv-err");
+    var asofEl = document.getElementById("stock-asof");
+    var indNote = document.getElementById("ind-note");
+    var chart = LW.createChart(chartEl, Object.assign({ width: chartEl.clientWidth, height: chartEl.clientHeight }, themeOpts()));
+    var chartSeries = [];
+    var rsiChart = null, rsiSeries = null;
+    var macdChart = null, macdLineS = null, macdSigS = null, macdHistS = null;
+
+    function clearMain(){
+      var i;
+      for (i = 0; i < chartSeries.length; i++){
+        try { chart.removeSeries(chartSeries[i]); } catch (e){}
+      }
+      chartSeries = [];
+    }
+    function setIndNote(msgs){
+      if (!indNote) return;
+      if (msgs && msgs.length){
+        indNote.textContent = msgs.join(" ");
+        indNote.hidden = false;
+      } else {
+        indNote.textContent = "";
+        indNote.hidden = true;
+      }
+    }
+    function visibleData(){
+      var n = stockData.length;
+      if (tf === "1m" && n > 22) return stockData.slice(n - 22);
+      if (tf === "3m" && n > 66) return stockData.slice(n - 66);
+      return stockData;
+    }
+    function sanitize(p){
+      var o = Number(p.open), c = Number(p.close);
+      var h = (p.high === null || p.high === undefined) ? Math.max(o, c) : Number(p.high);
+      var l = (p.low === null || p.low === undefined) ? Math.min(o, c) : Number(p.low);
+      return { time: p.date, open: o, high: h, low: l, close: c, volume: Number(p.volume) || 0 };
+    }
+
+    function addOverlayLine(dates, values, color){
+      var s = chart.addSeries(LW.LineSeries, { color: color, lineWidth: 1, priceLineVisible: false, lastValueVisible: false, crosshairMarkerVisible: false });
+      var data = [], i;
+      for (i = 0; i < dates.length; i++){
+        if (values[i] !== null && values[i] !== undefined) data.push({ time: dates[i], value: values[i] });
+      }
+      s.setData(data);
+      chartSeries.push(s);
+    }
+
+    function drawRsi(dates, closes){
+      var wrap = document.getElementById("rsi-wrap");
+      var cap = document.getElementById("rsi-cap");
+      var need = 15;
+      if (closes.length < need){
+        if (rsiChart){ try { rsiChart.remove(); } catch (e){} rsiChart = null; rsiSeries = null; }
+        if (wrap) wrap.hidden = true;
+        if (cap) cap.hidden = true;
+        return "RSI 14 needs " + need + " sessions \u2014 history accumulates daily.";
+      }
+      if (wrap) wrap.hidden = false;
+      if (!rsiChart && wrap){
+        rsiChart = LW.createChart(wrap, Object.assign({ width: wrap.clientWidth, height: wrap.clientHeight }, themeOpts()));
+        rsiSeries = rsiChart.addSeries(LW.LineSeries, { color: "#8b5cf6", lineWidth: 2, priceLineVisible: false });
+        rsiSeries.createPriceLine({ price: 70, color: "#dc2626", lineWidth: 1, lineStyle: LW.LineStyle.Dashed, axisLabelVisible: true, title: "70" });
+        rsiSeries.createPriceLine({ price: 30, color: "#16a34a", lineWidth: 1, lineStyle: LW.LineStyle.Dashed, axisLabelVisible: true, title: "30" });
+      }
+      if (!rsiChart || !rsiSeries) return null;
+      var r = rsiWilder(closes, 14), data = [], i, last = null;
+      for (i = 0; i < dates.length; i++){
+        if (r[i] !== null){ data.push({ time: dates[i], value: r[i] }); last = r[i]; }
+      }
+      rsiSeries.setData(data);
+      rsiChart.timeScale().fitContent();
+      if (cap){
+        cap.textContent = "RSI (14)" + (last !== null ? " \u00B7 " + last.toFixed(2) : "") +
+          " \u2014 above 70 often reads overbought, below 30 oversold. Educational only, not advice.";
+        cap.hidden = false;
+      }
+      return null;
+    }
+    function hideRsi(){
+      var wrap = document.getElementById("rsi-wrap");
+      var cap = document.getElementById("rsi-cap");
+      if (wrap) wrap.hidden = true;
+      if (cap) cap.hidden = true;
+    }
+
+    function drawMacd(dates, closes){
+      var wrap = document.getElementById("macd-wrap");
+      var cap = document.getElementById("macd-cap");
+      var need = 26;
+      if (closes.length < need){
+        if (macdChart){ try { macdChart.remove(); } catch (e){} macdChart = null; macdLineS = macdSigS = macdHistS = null; }
+        if (wrap) wrap.hidden = true;
+        if (cap) cap.hidden = true;
+        return "MACD needs " + need + " sessions \u2014 history accumulates daily.";
+      }
+      if (wrap) wrap.hidden = false;
+      if (!macdChart && wrap){
+        macdChart = LW.createChart(wrap, Object.assign({ width: wrap.clientWidth, height: wrap.clientHeight }, themeOpts()));
+        macdHistS = macdChart.addSeries(LW.HistogramSeries, { priceLineVisible: false, lastValueVisible: false });
+        macdLineS = macdChart.addSeries(LW.LineSeries, { color: "#2563eb", lineWidth: 2, priceLineVisible: false, lastValueVisible: false, crosshairMarkerVisible: false });
+        macdSigS = macdChart.addSeries(LW.LineSeries, { color: "#f59e0b", lineWidth: 1, priceLineVisible: false, lastValueVisible: false, crosshairMarkerVisible: false });
+      }
+      if (!macdChart || !macdLineS) return null;
+      var m = macdCalc(closes), ld = [], sd = [], hd = [], i, v;
+      for (i = 0; i < dates.length; i++){
+        if (m.line[i] !== null) ld.push({ time: dates[i], value: m.line[i] });
+        if (m.signal[i] !== null) sd.push({ time: dates[i], value: m.signal[i] });
+        if (m.line[i] !== null && m.signal[i] !== null){
+          v = m.line[i] - m.signal[i];
+          hd.push({ time: dates[i], value: v, color: v >= 0 ? "rgba(22,163,74,0.55)" : "rgba(220,38,38,0.55)" });
+        }
+      }
+      macdLineS.setData(ld);
+      macdSigS.setData(sd);
+      macdHistS.setData(hd);
+      macdChart.timeScale().fitContent();
+      if (cap){
+        cap.textContent = "MACD (12, 26, 9) \u2014 blue MACD line, amber signal line. Educational only, not advice.";
+        cap.hidden = false;
+      }
+      return null;
+    }
+    function hideMacd(){
+      var wrap = document.getElementById("macd-wrap");
+      var cap = document.getElementById("macd-cap");
+      if (wrap) wrap.hidden = true;
+      if (cap) cap.hidden = true;
+    }
+
+    function drawStock(){
+      var prices = visibleData();
+      if (!prices.length) return;
+      clearMain();
+      setIndNote(null);
+      var notes = [];
+      var data = prices.map(sanitize);
+      var dates = data.map(function(d){ return d.time; });
+      var closes = data.map(function(d){ return d.close; });
+      var i;
+
+      if (ind.compare){
+        /* rebased % comparison: stock vs ASI on separate scales */
+        var map = {};
+        for (i = 0; i < asiData.length; i++) map[asiData[i].date] = asiData[i].value;
+        var sd = [], sv = [], av = [];
+        for (i = 0; i < data.length; i++){
+          if (map[data[i].time] !== undefined && map[data[i].time] !== null){
+            sd.push(data[i].time); sv.push(data[i].close); av.push(map[data[i].time]);
+          }
+        }
+        if (!asiReady){
+          notes.push("ASI data still loading \u2014 comparison will appear in a moment.");
+        } else if (sv.length < 2){
+          notes.push("Not enough overlapping ASI sessions to compare.");
+        } else {
+          var sb = sv[0], ab = av[0];
+          var sPct = [], aPct = [];
+          for (i = 0; i < sv.length; i++){
+            sPct.push({ time: sd[i], value: (sv[i] / sb - 1) * 100 });
+            aPct.push({ time: sd[i], value: (av[i] / ab - 1) * 100 });
+          }
+          var ls = chart.addSeries(LW.LineSeries, { color: "#0e9f6e", lineWidth: 2, title: sym + " %" });
+          ls.setData(sPct); chartSeries.push(ls);
+          var as = chart.addSeries(LW.LineSeries, { color: "#c9a227", lineWidth: 2, priceScaleId: "asi", title: "ASI %" });
+          as.setData(aPct); chartSeries.push(as);
+          chart.priceScale("asi").applyOptions({ scaleMargins: { top: 0.12, bottom: 0.12 } });
+        }
+      } else if (ctype === "candles"){
+        var cs = chart.addSeries(LW.CandlestickSeries, { upColor: UP, downColor: DOWN, wickUpColor: UP, wickDownColor: DOWN, borderVisible: false });
+        cs.setData(data.map(function(d){ return { time: d.time, open: d.open, high: d.high, low: d.low, close: d.close }; }));
+        chartSeries.push(cs);
+      } else {
+        var ar = chart.addSeries(LW.AreaSeries, { lineColor: "#0e9f6e", topColor: "rgba(14,159,110,0.35)", bottomColor: "rgba(14,159,110,0.02)", lineWidth: 2, priceLineVisible: true });
+        ar.setData(data.map(function(d){ return { time: d.time, value: d.close }; }));
+        chartSeries.push(ar);
+      }
+
+      /* price-based overlays only make sense off compare mode */
+      if (!ind.compare){
+        if (ind.sma5){
+          if (closes.length >= 5) addOverlayLine(dates, sma(closes, 5), "#f59e0b");
+          else notes.push("SMA 5 needs 5 sessions \u2014 history accumulates daily.");
+        }
+        if (ind.sma20){
+          if (closes.length >= 20) addOverlayLine(dates, sma(closes, 20), "#2563eb");
+          else notes.push("SMA 20 needs 20 sessions \u2014 history accumulates daily.");
+        }
+      }
+
+      var hasVol = data.some(function(d){ return d.volume > 0; });
+      if (hasVol){
+        var vs = chart.addSeries(LW.HistogramSeries, { priceScaleId: "", priceFormat: { type: "volume" } });
+        chart.priceScale("").applyOptions({ scaleMargins: { top: 0.86, bottom: 0 } });
+        vs.setData(data.map(function(d){
+          return { time: d.time, value: d.volume, color: d.close >= d.open ? "rgba(22,163,74,0.45)" : "rgba(220,38,38,0.45)" };
+        }));
+        chartSeries.push(vs);
+      }
+
+      /* oscillator panes */
+      if (ind.rsi){
+        var rn = drawRsi(dates, closes);
+        if (rn) notes.push(rn);
+      } else hideRsi();
+      if (ind.macd){
+        var mn = drawMacd(dates, closes);
+        if (mn) notes.push(mn);
+      } else hideMacd();
+
+      chart.timeScale().fitContent();
+      setIndNote(notes);
+
+      var first = data[0], last = data[data.length - 1];
+      var chg = (last.close - first.close) / first.close * 100;
+      var arrow = chg >= 0 ? "\u25B2" : "\u25BC";
+      var active = [];
+      if (ind.sma5) active.push("SMA 5");
+      if (ind.sma20) active.push("SMA 20");
+      if (ind.rsi) active.push("RSI 14");
+      if (ind.macd) active.push("MACD");
+      if (ind.compare) active.push("vs ASI (rebased %)");
+      asofEl.textContent = sym + " \u00B7 " + data.length + " sessions (" + fmtDate(first.time) + " \u2013 " + fmtDate(last.time) + ") \u00B7 " +
+        money(last.close) + " (" + arrow + " " + Math.abs(chg).toFixed(2) + "%)" +
+        (active.length ? " \u00B7 " + active.join(", ") : "") +
+        " \u00B7 Nairaview market feed, daily closes \u2014 not live.";
+    }
+
+    function loadStock(){
+      if (errEl){ errEl.style.display = "flex"; errEl.textContent = "Loading chart\u2026"; }
+      fetch(API + "/api/history?symbol=" + encodeURIComponent(sym))
+        .then(function(r){ if (!r.ok) throw new Error("http " + r.status); return r.json(); })
+        .then(function(j){
+          if (!j.prices || !j.prices.length) throw new Error("no data");
+          stockData = j.prices;
+          drawStock();
+          if (errEl) errEl.style.display = "none";
+        })
+        .catch(function(e){
+          stockData = [];
+          if (errEl){ errEl.style.display = "flex"; errEl.textContent = "Could not load " + sym + " data (" + e.message + ")."; }
+        });
+    }
+
+    /* ---------- symbol: quick picks + search ---------- */
+    function setSym(v){
+      sym = v;
+      var row = document.getElementById("sym-row");
+      if (row){
+        Array.prototype.forEach.call(row.querySelectorAll("button[data-sym]"), function(x){
+          x.setAttribute("aria-pressed", x.getAttribute("data-sym") === v ? "true" : "false");
+        });
+      }
+      var sn = document.getElementById("search-note");
+      if (sn){ sn.textContent = ""; sn.hidden = true; }
+      loadStock();
+    }
+    var symRow = document.getElementById("sym-row");
+    if (symRow){
+      symRow.addEventListener("click", function(e){
+        var b = e.target.closest("button[data-sym]"); if (!b) return;
+        setSym(b.getAttribute("data-sym"));
+      });
+    }
+
+    function parseStocks(j){
+      if (!j) return [];
+      if (Array.isArray(j)) return j;
+      if (j.stocks){
+        if (Array.isArray(j.stocks)) return j.stocks;
+        if (j.stocks.stocks && Array.isArray(j.stocks.stocks)) return j.stocks.stocks;
+      }
+      return [];
+    }
+    function buildDatalist(){
+      fetch(API + "/api/prices")
+        .then(function(r){ if (!r.ok) throw new Error("http " + r.status); return r.json(); })
+        .then(function(j){
+          var list = parseStocks(j);
+          var dl = document.getElementById("sym-list");
+          if (!dl) return;
+          var seen = {}, i, s, opt;
+          for (i = 0; i < list.length; i++){
+            s = list[i];
+            if (!s || !s.symbol || seen[s.symbol]) continue;
+            seen[s.symbol] = true;
+            knownSyms[String(s.symbol).toUpperCase()] = true;
+            opt = document.createElement("option");
+            opt.value = s.symbol;
+            opt.textContent = s.symbol + (s.name ? " \u2014 " + s.name : "");
+            dl.appendChild(opt);
+          }
+        })
+        .catch(function(){ /* search stays empty; quick picks still work */ });
+    }
+    var searchInput = document.getElementById("sym-search");
+    function trySearch(){
+      if (!searchInput) return;
+      var v = searchInput.value.trim().toUpperCase();
+      if (!v) return;
+      var sn = document.getElementById("search-note");
+      if (knownSyms[v]){
+        setSym(v);
+      } else if (sn){
+        sn.textContent = "\u201C" + v + "\u201D is not a known ticker \u2014 pick one from the list.";
+        sn.hidden = false;
+      }
+    }
+    if (searchInput){
+      searchInput.addEventListener("change", trySearch);
+      searchInput.addEventListener("keydown", function(e){
+        if (e.key === "Enter"){ e.preventDefault(); trySearch(); }
+      });
+    }
+
+    /* ---------- timeframe / style / indicator toggles ---------- */
+    var tfRow = document.getElementById("tf-row");
+    if (tfRow){
+      tfRow.addEventListener("click", function(e){
+        var b = e.target.closest("button[data-tf]"); if (!b) return;
+        tf = b.getAttribute("data-tf");
+        Array.prototype.forEach.call(tfRow.querySelectorAll("button"), function(x){
+          x.setAttribute("aria-pressed", x === b ? "true" : "false");
+        });
+        drawStock();
+      });
+    }
+    var typeRow = document.getElementById("type-row");
+    if (typeRow){
+      typeRow.addEventListener("click", function(e){
+        var b = e.target.closest("button[data-type]"); if (!b) return;
+        ctype = b.getAttribute("data-type");
+        Array.prototype.forEach.call(typeRow.querySelectorAll("button"), function(x){
+          x.setAttribute("aria-pressed", x === b ? "true" : "false");
+        });
+        drawStock();
+      });
+    }
+    var indRow = document.getElementById("ind-row");
+    if (indRow){
+      indRow.addEventListener("click", function(e){
+        var b = e.target.closest("button[data-ind]"); if (!b) return;
+        var k = b.getAttribute("data-ind");
+        ind[k] = !ind[k];
+        b.setAttribute("aria-pressed", ind[k] ? "true" : "false");
+        drawStock();
+      });
+    }
+
+    /* ---------- ASI chart (shared fetch feeds compare mode) ---------- */
+    var asiEl = document.getElementById("tv-asi");
+    var asiErr = document.getElementById("asi-err");
+    var asiAsof = document.getElementById("asi-asof");
+    var asiChart = LW.createChart(asiEl, Object.assign({ width: asiEl.clientWidth, height: asiEl.clientHeight }, themeOpts()));
+    fetch(API + "/api/asi-history")
+      .then(function(r){ if (!r.ok) throw new Error("http " + r.status); return r.json(); })
+      .then(function(j){
+        var hist = j.history || [];
+        if (!hist.length) throw new Error("no data");
+        asiData = hist;
+        asiReady = true;
+        if (asiErr) asiErr.style.display = "none";
+        var s = asiChart.addSeries(LW.AreaSeries, { lineColor: "#c9a227", topColor: "rgba(201,162,39,0.35)", bottomColor: "rgba(201,162,39,0.02)", lineWidth: 2 });
+        s.setData(hist.map(function(p){ return { time: p.date, value: p.value }; }));
+        asiChart.timeScale().fitContent();
+        var first = hist[0], last = hist[hist.length - 1];
+        var chg = ((last.value - first.value) / first.value * 100);
+        if (asiAsof) asiAsof.textContent = "NGX All-Share Index \u00B7 " + hist.length + " sessions (" + fmtDate(first.date) + " \u2013 " + fmtDate(last.date) + ") \u00B7 " +
+          Number(last.value).toLocaleString("en-NG", {minimumFractionDigits: 2}) + " (" + (chg >= 0 ? "+" : "") + chg.toFixed(2) + "%) \u00B7 Nairaview market feed.";
+        if (ind.compare) drawStock();
+      })
+      .catch(function(e){ if (asiErr) asiErr.textContent = "Could not load ASI data (" + e.message + ")."; });
+
+    /* ---------- resize ---------- */
+    function fit(){
+      chart.applyOptions({ width: chartEl.clientWidth, height: chartEl.clientHeight });
+      asiChart.applyOptions({ width: asiEl.clientWidth, height: asiEl.clientHeight });
+      var rw = document.getElementById("rsi-wrap");
+      if (rsiChart && rw) rsiChart.applyOptions({ width: rw.clientWidth, height: rw.clientHeight });
+      var mw = document.getElementById("macd-wrap");
+      if (macdChart && mw) macdChart.applyOptions({ width: mw.clientWidth, height: mw.clientHeight });
+    }
+    if (window.ResizeObserver){
+      var ro = new ResizeObserver(fit);
+      ro.observe(chartEl); ro.observe(asiEl);
+      var rsiWrap = document.getElementById("rsi-wrap");
+      if (rsiWrap) ro.observe(rsiWrap);
+      var macdWrap = document.getElementById("macd-wrap");
+      if (macdWrap) ro.observe(macdWrap);
+    } else {
+      window.addEventListener("resize", fit);
+    }
+
+    buildDatalist();
+    loadStock();
+  })();
+  </script>
+</body>
+</html>

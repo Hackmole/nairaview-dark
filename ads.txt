@@ -1,0 +1,2 @@
+# Nairaview ads.txt — Ezoic seller entries will be pasted here after account approval.
+# (Copy the lines from your Ezoic dashboard > Settings > Ads.txt manager.)

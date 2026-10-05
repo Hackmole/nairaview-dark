@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>try{var t=localStorage.getItem("nv-theme");document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#087a4b" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nairaview" />
+<meta property="og:title" content="Nairaview — Nigerian Stock Exchange (NGX) Market Data, News &amp; Tools" />
+<meta property="og:description" content="Nairaview tracks the Nigerian Exchange: ASI snapshot, top gainers and losers, a market heatmap, every listed stock, public offers, dividends calendar and market news." />
+<meta property="og:url" content="https://nairaview.com/" />
+<meta property="og:image" content="https://nairaview.com/assets/og-default.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nairaview — Nigerian Stock Exchange (NGX) Market Data, News &amp; Tools" />
+<meta name="twitter:description" content="Nairaview tracks the Nigerian Exchange: ASI snapshot, top gainers and losers, a market heatmap, every listed stock, public offers, dividends calendar and market news." />
+<meta name="twitter:image" content="https://nairaview.com/assets/og-default.png" />
+<link rel="canonical" href="https://nairaview.com/" />
+  <meta name="description" content="Nairaview tracks the Nigerian Exchange: ASI snapshot, top gainers and losers, a market heatmap, every listed stock, public offers, dividends calendar and market news." />
+  <link rel="icon" href="assets/logo-icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="assets/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <title>Nairaview — Nigerian Stock Exchange (NGX) Market Data, News & Tools</title>
+  <link rel="stylesheet" href="assets/styles.css?v=20261005dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="Nairaview home"><picture><source srcset="assets/logo-dark.svg" media="(prefers-color-scheme: dark)"><img src="assets/logo.svg" alt="Nairaview" height="34"></picture></a>
+      <nav class="site-nav" aria-label="Primary">
+          <a href="./" class="active">Home</a>
+          <a href="stocks">Stocks</a>
+          <a href="screener">Screener</a>
+          <a href="offers">Offers</a>
+          <a href="calendar">Calendar</a>
+          <a href="news">News</a>
+          <a href="learn">Learn</a>
+          <a href="market-recap">Recap</a>
+      </nav>
+    </div>
+  </header>
+  <div class="shell">
+    <div class="live-ticker" role="region" aria-label="NGX market ticker">
+      <div class="ticker-track" id="tickerTrack" aria-hidden="true"></div>
+    </div>
+    <div class="topline">
+          <span class="status"><i class="status-dot" aria-hidden="true"></i> MARKET CLOSED</span>
+          <nav class="section-subnav" aria-label="On this page">
+            <a href="#performance">Overview</a>
+            <a href="#leaders">Breadth</a>
+            <a href="#heatmap">Heatmap</a>
+            <a href="#market-news">News</a>
+          </nav>
+          <span id="toplineDate" class="topline-date">DAILY CLOSE · MON 5 OCT 2026 · WAT</span>
+        </div>
+    <main>
+      <section class="hero" aria-labelledby="market-heading">
+              <div class="hero-main">
+                <div class="eyebrow">NGX All-Share Index</div>
+                <h1 id="market-heading">250,667.86</h1>
+                <div class="hero-move" id="heroMove"><span class="down">▼ −0.015%</span><span class="points">−36.60 points today</span></div>
+                <p class="hero-meta" id="heroNote">As of the 5 Oct 2026 close</p>
+                <a class="btn-ghost hero-cta" href="https://ngxgroup.com/" target="_blank" rel="noopener noreferrer">Official NGX market data <span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="hero-side"><span class="status-pill is-closed" id="heroPill"><span class="dot"></span>MARKET CLOSED</span></div>
+            </section>
+            <div class="ad-slot ad-leaderboard" aria-hidden="true">
+              <div class="ad-label">Advertisement</div>
+              <script>
+  atOptions = {
+    'key' : '66835af5f63b0f5a7059b9333d8d655e',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/66835af5f63b0f5a7059b9333d8d655e/invoke.js"></script>
+            </div>
+      <section class="metrics" aria-label="Market summary">
+              <article class="metric"><span class="metric-label">Market cap</span><span class="metric-value" id="metricMcap">₦163.655tn</span></article>
+              <article class="metric"><span class="metric-label">Volume</span><span class="metric-value" id="metricVol">708.81m</span></article>
+              <article class="metric"><span class="metric-label">Deals</span><span class="metric-value" id="metricDeals">42,434</span></article>
+              <article class="metric"><span class="metric-label">YTD</span><span class="metric-value" id="metricYtd">+62.02%</span></article>
+            </section>
+      <section class="fx-tiles" aria-label="Currency to naira rates">
+        <div class="fx-tiles-head">
+          <span class="eyebrow">FX rates</span>
+          <a class="fx-tiles-link" href="fx">Track the rates &rarr;</a>
+        </div>
+        <div class="fx-tiles-grid">
+          <article class="fx-tile">
+            <div class="fx-tile-head"><span class="fx-strip-label">USD / NGN</span><span class="fx-tag">indicative</span></div>
+            <div class="fx-tile-row"><span class="fx-tile-key">Official</span><strong id="fxUsdOfficial">₦—</strong></div>
+            <div class="fx-tile-row"><span class="fx-tile-key">Street</span><strong id="fxUsdParallel">₦—</strong></div>
+            <div class="fx-tile-row fx-tile-spread"><span class="fx-tile-key">Spread</span><strong id="fxUsdSpread">₦—</strong></div>
+          </article>
+          <article class="fx-tile">
+            <div class="fx-tile-head"><span class="fx-strip-label">EUR / NGN</span><span class="fx-tag">indicative</span></div>
+            <div class="fx-tile-row"><span class="fx-tile-key">Official</span><strong id="fxEurOfficial">₦—</strong></div>
+            <div class="fx-tile-row"><span class="fx-tile-key">Street</span><strong id="fxEurParallel">₦—</strong></div>
+            <div class="fx-tile-row fx-tile-spread"><span class="fx-tile-key">Spread</span><strong id="fxEurSpread">₦—</strong></div>
+          </article>
+          <article class="fx-tile">
+            <div class="fx-tile-head"><span class="fx-strip-label">GBP / NGN</span><span class="fx-tag">indicative</span></div>
+            <div class="fx-tile-row"><span class="fx-tile-key">Official</span><strong id="fxGbpOfficial">₦—</strong></div>
+            <div class="fx-tile-row"><span class="fx-tile-key">Street</span><strong id="fxGbpParallel">₦—</strong></div>
+            <div class="fx-tile-row fx-tile-spread"><span class="fx-tile-key">Spread</span><strong id="fxGbpSpread">₦—</strong></div>
+          </article>
+        </div>
+      </section>
+      <section class="section card-section" id="performance">
+              <div class="section-heading">
+                <div><div class="kicker">Index trend</div><h2>Market performance</h2></div>
+              </div>
+              <div class="chart-card">
+                <div class="chart-top">
+                  <div><div class="chart-value" id="chartValue">250,667.86</div><div class="chart-change" id="chartChange">+60.18% since 31 Dec 2025</div></div>
+                  <div class="range-controls" role="group" aria-label="Chart period">
+                    <button class="range-button" data-range="1W" aria-pressed="true">1W</button>
+                    <button class="range-button" data-range="1M" aria-pressed="false">1M</button>
+                    <button class="range-button" data-range="3M" aria-pressed="false">3M</button>
+                    <button class="range-button" data-range="6M" aria-pressed="false">6M</button>
+                    <button class="range-button" data-range="YTD" aria-pressed="false">YTD</button>
+                  </div>
+                </div>
+                <div class="chart-wrap">
+                  <svg id="asiChart" role="img" aria-labelledby="chartTitle chartDesc" viewBox="0 0 1000 360" preserveAspectRatio="none">
+                    <title id="chartTitle">NGX All-Share Index selected closing values</title>
+                    <desc id="chartDesc">Interactive chart showing selected verified market closes from 31 December 2025 to 2 October 2026.</desc>
+                  </svg>
+                  <div class="chart-tooltip" id="tooltip" aria-hidden="true"></div>
+                </div>
+                <div class="chart-caption"><span id="periodLabel">31 Dec 2025 — 5 Oct 2026</span></div>
+              </div>
+            </section>
+      <section class="section card-section" id="leaders">
+              <div class="section-heading">
+                <div><div class="kicker">Market breadth</div><h2>Gainers and losers</h2></div>
+              </div>
+              <div class="table-tools">
+                <input class="stock-search" id="stockSearch" type="search" placeholder="Search stocks — try “bank” or “FIDELITYBK”" aria-label="Search stocks" autocomplete="off" />
+              </div>
+              <div class="breadth-toggle" role="tablist" aria-label="Market breadth views">
+                <button role="tab" id="view-breadth" aria-controls="market-list" aria-selected="true" data-view="breadth">Leaders &amp; laggards</button>
+                <button role="tab" id="view-volume" aria-controls="market-list" aria-selected="false" data-view="volume">Volume</button>
+                <button role="tab" id="view-watchlist" aria-controls="market-list" aria-selected="false" data-view="watchlist">Watchlist <span class="watch-count" id="watchCount"></span></button>
+              </div>
+              <div class="breadth-cols" id="breadthCols">
+                <div class="breadth-col">
+                  <h3 class="breadth-title"><span class="b-arrow up" aria-hidden="true">▲</span> Leaders</h3>
+                  <div class="market-table" id="leadersList"></div>
+                </div>
+                <div class="breadth-col">
+                  <h3 class="breadth-title"><span class="b-arrow down" aria-hidden="true">▼</span> Laggards</h3>
+                  <div class="market-table" id="laggardsList"></div>
+                </div>
+              </div>
+              <div class="market-table" id="market-list" role="tabpanel" aria-labelledby="view-breadth" hidden></div>
+              <p class="table-note">Fixed at the <span class="noteDate">5 Oct 2026</span> close · ~30-min delayed during sessions.</p>
+            </section>
+      <section class="section card-section" id="heatmap">
+              <div class="section-heading">
+                <div><div class="kicker">Market map</div><h2>Market heatmap</h2></div>
+              </div>
+              <div class="heatmap" id="heatTiles" role="list" aria-label="Market heatmap, 2 October 2026"></div>
+              <div class="heatmap-legend" aria-hidden="true"><span><i class="sw up"></i>Gainers</span><span><i class="sw down"></i>Losers</span></div>
+            </section>
+            <div class="ad-slot ad-rectangle" aria-hidden="true">
+              <div class="ad-label">Advertisement</div>
+              <script>
+  atOptions = {
+    'key' : '1d9aea0c3b3b6b07c1fe639a84f5b19c',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/1d9aea0c3b3b6b07c1fe639a84f5b19c/invoke.js"></script>
+            </div>
+      <section class="section" id="market-news">
+              <div class="section-heading">
+                <div><div class="kicker">News</div><h2>Market wrap</h2></div>
+              </div>
+              <article class="news-feature">
+                <div class="date" id="wrapDate">MARKET WRAP · 5 OCT</div>
+                <h3>ASI slips 0.53% on the week to 250,667.86; market cap ₦162.75tn</h3>
+                <p>Monday closed nearly flat at -0.06% with 27 advancers against 34 decliners.</p>
+                <a class="btn-gold wrap-cta" href="ngx-weekly-recap-26-sep-2026">Read the weekly recap <span aria-hidden="true">&rarr;</span></a>
+              </article>
+            </section>
+    </main>
+    </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="./" aria-label="Nairaview home"><img src="assets/logo-dark.svg" alt="Nairaview" height="34"></a>
+          <p>The Nigerian Exchange, decoded daily. Prices, movers, offers, news and plain-language guides.</p>
+          <a class="footer-x" href="https://x.com/naira_view" target="_blank" rel="noopener" aria-label="Nairaview on X"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+        <div class="footer-col">
+          <h4>Markets</h4>
+          <a href="stocks">All listed stocks</a>
+          <a href="screener">Stock screener</a>
+          <a href="offers">Public offers</a>
+          <a href="calendar">Market calendar</a>
+          <a href="fx">Dollar / naira</a>
+        </div>
+        <div class="footer-col">
+          <h4>Nairaview</h4>
+          <a href="news">Market news</a>
+          <a href="learn">Learn</a>
+          <a href="portfolio">Portfolio tracker</a>
+          <a href="market-recap">Weekly recap</a>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; 2026 Nairaview. information only, not investment advice.</span>
+        <span>Market data is delayed. Prices may have changed, confirm before acting.</span>
+      </div>
+    </div>
+  </footer>
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalSymbol">
+      <button class="modal-close" id="modalClose" aria-label="Close stock details">×</button>
+      <div class="modal-eyebrow" id="modalList">Snapshot · 5 Oct 2026</div>
+      <div class="modal-symbol" id="modalSymbol"></div>
+      <div class="modal-company" id="modalCompany"></div>
+      <div class="modal-grid">
+        <div class="modal-cell"><span>Price</span><strong id="modalPrice"></strong></div>
+        <div class="modal-cell"><span id="modalMoveLabel">Day change</span><strong id="modalMove"></strong></div>
+      </div>
+      <a class="modal-live" id="modalPage" href="#" hidden>Full stock page on Nairaview &rarr;</a>
+      <button class="modal-star" id="modalStar" type="button"></button>
+    </div>
+  </div>
+
+
+    <div class="ad-slot ad-sticky-mobile" id="adSticky" aria-hidden="true">
+      <button class="ad-close" id="adStickyClose" type="button" aria-label="Close advertisement">×</button>
+      <div class="ad-label">Advertisement</div>
+      <script>
+  atOptions = {
+    'key' : '2c91ae62a5b6daf76d6821ebc779a810',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/2c91ae62a5b6daf76d6821ebc779a810/invoke.js"></script>
+    </div>
+  <script src="assets/data.js?v=20261005dark"></script>
+  <script src="assets/logos.js"></script>
+  <script src="assets/stock-pages.js"></script>
+  <script src="assets/site.js?v=20261005dark"></script>
+  <script src="assets/live.js?v=20261005dark"></script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a9f4136dd40547a7b1acca41e62cc7a5"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

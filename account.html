@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>try{var t=localStorage.getItem("nv-theme");document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#087a4b" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nairaview" />
+<meta property="og:title" content="Account — Sign up or log in | Nairaview" />
+<meta property="og:description" content="Create a free Nairaview account to track your NGX portfolio. Your holdings are private to you." />
+<meta property="og:url" content="https://nairaview.com/account" />
+<meta property="og:image" content="https://nairaview.com/assets/og-default.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Account — Sign up or log in | Nairaview" />
+<meta name="twitter:description" content="Create a free Nairaview account to track your NGX portfolio. Your holdings are private to you." />
+<meta name="twitter:image" content="https://nairaview.com/assets/og-default.png" />
+<link rel="canonical" href="https://nairaview.com/account" />
+  <meta name="description" content="Create a free Nairaview account to track your NGX portfolio. Your holdings are private to you." />
+  <link rel="icon" href="assets/logo-icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="assets/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <title>Account — Sign up or log in | Nairaview</title>
+  <link rel="stylesheet" href="assets/styles.css?v=20261005dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="Nairaview home"><picture><source srcset="assets/logo-dark.svg" media="(prefers-color-scheme: dark)"><img src="assets/logo.svg" alt="Nairaview" height="34"></picture></a>
+      <nav class="site-nav" aria-label="Primary">
+          <a href="./">Home</a>
+          <a href="stocks">Stocks</a>
+          <a href="screener">Screener</a>
+          <a href="offers">Offers</a>
+          <a href="calendar">Calendar</a>
+          <a href="news">News</a>
+          <a href="learn">Learn</a>
+          <a href="market-recap">Recap</a>
+      </nav>
+    </div>
+  </header>
+  <div class="shell">
+    <div class="topline">
+      <span class="status"><i class="status-dot" aria-hidden="true"></i> MARKET CLOSED</span>
+      <span class="topline-date">DAILY CLOSE · MON 5 OCT 2026 · WAT</span>
+    </div>
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <p class="kicker">YOUR ACCOUNT</p>
+          <h1 class="auth-title">Sign up or log in</h1>
+          <p class="guide-p">One free account unlocks your <a href="portfolio">portfolio tracker</a>.</p>
+        </div>
+
+        <div id="authForms" class="auth-wrap" hidden>
+          <form id="authForm" class="auth-form">
+            <label>Email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com" /></label>
+            <label>Password<input type="password" name="password" required minlength="8" autocomplete="current-password" placeholder="At least 8 characters" /></label>
+            <p class="forgot-row"><a href="#" id="forgotLink">Forgot password?</a></p>
+            <p class="form-error" id="authError" role="alert" hidden></p>
+            <p class="form-note" id="authSuccess" role="status" hidden></p>
+            <div class="auth-actions">
+              <button type="submit" class="btn-primary" id="btnLogin">Log in</button>
+              <button type="submit" class="btn-ghost" id="btnSignup">Create account</button>
+            </div>
+            <p class="form-note">New to Nairaview? Tap <strong>Create account</strong> &mdash; it takes a minute. We store only your email and a scrambled password &mdash; never your broker details.</p>
+          </form>
+          <form id="forgotForm" class="auth-form" hidden>
+            <p class="guide-p">Enter your account email and we&rsquo;ll send you a link to choose a new password.</p>
+            <label>Email<input type="email" id="forgotEmail" required autocomplete="email" placeholder="you@example.com" /></label>
+            <p class="form-error" id="forgotError" role="alert" hidden></p>
+            <p class="form-note" id="forgotSent" hidden>If an account exists for that email, a reset link is on its way. Check your inbox (and spam folder).</p>
+            <div class="auth-actions">
+              <button type="submit" class="btn-primary">Send reset link</button>
+              <button type="button" class="btn-ghost" id="backToLogin">Back to log in</button>
+            </div>
+          </form>
+          <form id="resetForm" class="auth-form" hidden>
+            <label>New password<input type="password" id="resetPassword" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters" /></label>
+            <label>Confirm new password<input type="password" id="resetConfirm" required minlength="8" autocomplete="new-password" placeholder="Repeat your new password" /></label>
+            <p class="form-error" id="resetError" role="alert" hidden></p>
+            <button type="submit" class="btn-primary">Set new password</button>
+          </form>
+          <form id="tfaForm" class="auth-form" hidden>
+            <p class="guide-p"><strong>Check your authenticator app.</strong> Enter the 6-digit code below. Lost your phone? Type one of your backup codes instead.</p>
+            <label>Code<input type="text" id="tfaLoginCode" inputmode="numeric" autocomplete="one-time-code" maxlength="8" placeholder="123456 or backup code" /></label>
+            <p class="form-error" id="tfaError" role="alert" hidden></p>
+            <div class="auth-actions">
+              <button type="submit" class="btn-primary">Verify</button>
+              <button type="button" class="btn-ghost" id="tfaBack">Back</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="authState" class="auth-wrap" hidden>
+          <p class="guide-p">Signed in as <strong id="authEmail"></strong>.</p>
+          <form id="profileForm" class="auth-form">
+            <label>Display name (optional)<input type="text" id="profileName" maxlength="40" placeholder="What should we call you?" autocomplete="nickname" /></label>
+            <p class="form-error" id="profileError" role="alert" hidden></p>
+            <p class="form-note" id="profileSaved" hidden>Saved.</p>
+            <button type="submit" class="btn-primary">Save profile</button>
+          </form>
+          <p>
+            <a class="btn-primary" href="portfolio">Open my portfolio</a>
+            <button type="button" class="btn-ghost" id="logoutBtn">Log out</button>
+          </p>
+          <div class="auth-form" id="tfaSection" style="margin-top:1.5rem">
+            <p class="guide-p"><strong>Two-factor authentication</strong> <span id="tfaStatus">Checking&hellip;</span></p>
+            <div id="tfaOff" hidden>
+              <p class="guide-p">Adds an extra lock: after your password, you enter a 6-digit code from an authenticator app (Google Authenticator, Authy, 1Password&hellip;).</p>
+              <button type="button" class="btn-primary" id="tfaEnableBtn">Turn on two-factor</button>
+            </div>
+            <div id="tfaSetup" hidden>
+              <p class="guide-p"><strong>Step 1.</strong> In your authenticator app, add an account manually with this key:</p>
+              <p><code id="tfaSecret" style="word-break:break-all"></code></p>
+              <p class="guide-p"><strong>Step 2.</strong> Save these one-time backup codes somewhere safe &mdash; each works once if you lose your phone:</p>
+              <p><code id="tfaBackups" style="word-break:break-all"></code></p>
+              <p class="guide-p"><strong>Step 3.</strong> Enter the 6-digit code from your app to finish:</p>
+              <label>Code<input type="text" id="tfaVerifyCode" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="123456" /></label>
+              <p class="form-error" id="tfaSetupError" role="alert" hidden></p>
+              <div class="auth-actions">
+                <button type="button" class="btn-primary" id="tfaVerifyBtn">Verify and turn on</button>
+                <button type="button" class="btn-ghost" id="tfaCancelBtn">Cancel</button>
+              </div>
+            </div>
+            <div id="tfaOn" hidden>
+              <p class="guide-p">Two-factor authentication is <strong>on</strong> for your account.</p>
+              <label>Authenticator code (needed to turn it off)<input type="text" id="tfaDisableCode" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="123456" /></label>
+              <p class="form-error" id="tfaDisableError" role="alert" hidden></p>
+              <button type="button" class="btn-ghost" id="tfaDisableBtn">Turn off two-factor</button>
+            </div>
+          </div>
+          <div class="auth-form" id="alertsSection" style="margin-top:1.5rem">
+            <p class="guide-p"><strong>Price alerts</strong> &mdash; we check each daily close and email you once when a target hits.</p>
+            <div id="alertsList"><p class="guide-p">Loading&hellip;</p></div>
+            <p class="guide-p">Set new alerts from any <a href="stocks">stock page</a>.</p>
+            <p class="form-error" id="alertsError" role="alert" hidden></p>
+          </div>
+        </div>
+
+        <div id="authDown" class="auth-wrap" hidden>
+          <p class="guide-p">Accounts are not available right now &mdash; our user database is still being connected. Please check back shortly.</p>
+        </div>
+
+        <h2 class="guide-h2">Privacy</h2>
+        <ul class="guide-list">
+          <li id="tfaPrivacyNote">Two-factor authentication is available once you sign in &mdash; an extra lock on your account, plus an email whenever someone signs in.</li>
+          <li>Your portfolio is visible only to you, only while logged in.</li>
+          <li>We never ask for your broker login, bank details, or CSCS credentials &mdash; anyone who does is not us. See <a href="verify-investment-platform">how to spot scams</a>.</li>
+        </ul>
+      </section>
+    </main>
+    </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="./" aria-label="Nairaview home"><img src="assets/logo-dark.svg" alt="Nairaview" height="34"></a>
+          <p>The Nigerian Exchange, decoded daily. Prices, movers, offers, news and plain-language guides.</p>
+          <a class="footer-x" href="https://x.com/naira_view" target="_blank" rel="noopener" aria-label="Nairaview on X"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+        <div class="footer-col">
+          <h4>Markets</h4>
+          <a href="stocks">All listed stocks</a>
+          <a href="screener">Stock screener</a>
+          <a href="offers">Public offers</a>
+          <a href="calendar">Market calendar</a>
+          <a href="fx">Dollar / naira</a>
+        </div>
+        <div class="footer-col">
+          <h4>Nairaview</h4>
+          <a href="news">Market news</a>
+          <a href="learn">Learn</a>
+          <a href="portfolio">Portfolio tracker</a>
+          <a href="market-recap">Weekly recap</a>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; 2026 Nairaview. information only, not investment advice.</span>
+        <span>Market data is delayed. Prices may have changed, confirm before acting.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/data.js?v=20261005dark"></script>
+  <script src="assets/logos.js"></script>
+  <script src="assets/stock-pages.js"></script>
+  <script src="assets/site.js?v=20261005dark"></script>
+  <script src="assets/live.js?v=20261005dark"></script>
+  <script>
+  (function () {
+    var API = 'https://nairaview-api.meetomidiora.workers.dev';
+    var authForm = document.getElementById('authForm');
+    // Which submit button was pressed: click fires before submit, so this is reliable.
+    var authMode = 'login';
+    var tfaChallenge = null;
+    document.getElementById('btnLogin').addEventListener('click', function () { authMode = 'login'; });
+    document.getElementById('btnSignup').addEventListener('click', function () { authMode = 'signup'; });
+
+    function fail(id, msg) {
+      var el = document.getElementById(id);
+      el.textContent = msg;
+      el.hidden = false;
+    }
+
+    async function submit(url, errId) {
+      document.getElementById(errId).hidden = true;
+      var data = {
+        email: authForm.querySelector('[name="email"]').value.trim(),
+        password: authForm.querySelector('[name="password"]').value,
+      };
+      try {
+        var res = await fetch(url, {
+          method: 'POST',
+          credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        var out = await res.json();
+        if (!res.ok) { fail(errId, out.error || 'Something went wrong.'); return; }
+        if (out.need_2fa) {
+          tfaChallenge = out.challenge;
+          authForm.hidden = true;
+          document.getElementById('tfaForm').hidden = false;
+          return;
+        }
+        var okEl = document.getElementById('authSuccess');
+        okEl.textContent = authMode === 'signup' ? 'Account created — taking you to your portfolio…' : 'Signed in — taking you to your portfolio…';
+        okEl.hidden = false;
+        setTimeout(function () { window.location.href = 'portfolio'; }, 900);
+      } catch (e) {
+        fail(errId, 'Could not reach the server. Check your connection and try again.');
+      }
+    }
+    authForm.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      submit(authMode === 'signup' ? API + '/api/auth/signup' : API + '/api/auth/login', 'authError');
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', async function () {
+      try { await fetch(API + '/api/auth/logout', { method: 'POST', credentials: 'include' }); } catch (e) {}
+      window.location.reload();
+    });
+
+    document.getElementById('profileForm').addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var err = document.getElementById('profileError');
+      var saved = document.getElementById('profileSaved');
+      err.hidden = true; saved.hidden = true;
+      fetch(API + '/api/auth/profile', {
+        method: 'PUT',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ display_name: document.getElementById('profileName').value }),
+      }).then(function (res) { return res.json().then(function (out) { return { res: res, out: out }; }); })
+        .then(function (r) {
+          if (!r.res.ok) { err.textContent = r.out.error || 'Could not save.'; err.hidden = false; return; }
+          saved.hidden = false;
+        }).catch(function () {
+          err.textContent = 'Could not reach the server.';
+          err.hidden = false;
+        });
+    });
+
+    // Initial state
+    var resetToken = null;
+    try { resetToken = new URLSearchParams(window.location.search).get('reset'); } catch (e) {}
+
+    if (resetToken) {
+      // Password-reset landing: /account?reset=TOKEN
+      document.querySelector('.auth-title').textContent = 'Choose a new password';
+      var guideP = document.querySelector('.section-heading .guide-p');
+      if (guideP) guideP.hidden = true;
+      document.getElementById('authForms').hidden = false;
+      authForm.hidden = true;
+      var resetForm = document.getElementById('resetForm');
+      resetForm.hidden = false;
+      resetForm.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        document.getElementById('resetError').hidden = true;
+        var pw = document.getElementById('resetPassword').value;
+        if (pw !== document.getElementById('resetConfirm').value) { fail('resetError', 'The two passwords do not match.'); return; }
+        fetch(API + '/api/auth/reset', {
+          method: 'POST',
+          credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ token: resetToken, password: pw }),
+        }).then(function (res) { return res.json().then(function (out) { return { res: res, out: out }; }); })
+          .then(function (r) {
+            if (!r.res.ok) { fail('resetError', r.out.error || 'Could not reset your password.'); return; }
+            window.location.href = 'portfolio';
+          }).catch(function () {
+            fail('resetError', 'Could not reach the server. Check your connection and try again.');
+          });
+      });
+    } else {
+    // Forgot-password toggle
+    document.getElementById('forgotLink').addEventListener('click', function (ev) {
+      ev.preventDefault();
+      authForm.hidden = true;
+      document.getElementById('forgotForm').hidden = false;
+    });
+    document.getElementById('backToLogin').addEventListener('click', function () {
+      document.getElementById('forgotForm').hidden = true;
+      authForm.hidden = false;
+    });
+    // Two-factor login step
+    document.getElementById('tfaBack').addEventListener('click', function () {
+      document.getElementById('tfaForm').hidden = true;
+      authForm.hidden = false;
+    });
+    document.getElementById('tfaForm').addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      document.getElementById('tfaError').hidden = true;
+      fetch(API + '/api/auth/2fa/login', {
+        method: 'POST',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ challenge: tfaChallenge, code: document.getElementById('tfaLoginCode').value.trim() }),
+      }).then(function (res) { return res.json().then(function (out) { return { res: res, out: out }; }); })
+        .then(function (r) {
+          if (!r.res.ok) { fail('tfaError', r.out.error || 'Could not verify the code.'); return; }
+          window.location.href = 'portfolio';
+        }).catch(function () {
+          fail('tfaError', 'Could not reach the server. Check your connection and try again.');
+        });
+    });
+    document.getElementById('forgotForm').addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      document.getElementById('forgotError').hidden = true;
+      document.getElementById('forgotSent').hidden = true;
+      fetch(API + '/api/auth/forgot', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: document.getElementById('forgotEmail').value.trim() }),
+      }).then(function (res) { return res.json().then(function (out) { return { res: res, out: out }; }); })
+        .then(function (r) {
+          if (!r.res.ok) { fail('forgotError', r.out.error || 'Could not send the reset link.'); return; }
+          document.getElementById('forgotSent').hidden = false;
+        }).catch(function () {
+          fail('forgotError', 'Could not reach the server. Check your connection and try again.');
+        });
+    });
+
+    fetch(API + '/api/auth/me', { credentials: 'include' }).then(function (res) {
+      if (res.status === 503) {
+        document.getElementById('authDown').hidden = false;
+        return;
+      }
+      if (res.ok) return res.json().then(function (me) {
+        document.getElementById('authEmail').textContent = me.display_name ? me.display_name + ' (' + me.email + ')' : me.email;
+        document.getElementById('profileName').value = me.display_name || '';
+        document.getElementById('authState').hidden = false;
+        document.getElementById('tfaPrivacyNote').innerHTML = 'Turn on two-factor authentication above for an extra lock on your account &mdash; we&rsquo;ll also email you whenever someone signs in.';
+        setTfaUI(!!me.tfa_enabled);
+        loadAlerts();
+      });
+      document.getElementById('authForms').hidden = false;
+    }).catch(function () {
+      document.getElementById('authDown').hidden = false;
+    });
+
+    function setTfaUI(on) {
+      document.getElementById('tfaStatus').textContent = on ? 'is on.' : 'is off.';
+      document.getElementById('tfaOn').hidden = !on;
+      document.getElementById('tfaOff').hidden = on;
+      document.getElementById('tfaSetup').hidden = true;
+    }
+
+    function esc(s) {
+      return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+    function naira(n) {
+      return '\u20A6' + Number(n).toLocaleString('en-NG', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+    function loadAlerts() {
+      var list = document.getElementById('alertsList');
+      var err = document.getElementById('alertsError');
+      fetch(API + '/api/alerts', { credentials: 'include' }).then(function (res) {
+        return res.json().then(function (out) { return { ok: res.ok, out: out }; });
+      }).then(function (r) {
+        if (!r.ok) { err.textContent = r.out.error || 'Could not load alerts.'; err.hidden = false; return; }
+        var alerts = (r.out.alerts || []).slice().sort(function (a, b) { return a.ticker.localeCompare(b.ticker); });
+        if (!alerts.length) { list.innerHTML = '<p class="guide-p">No alerts yet.</p>'; return; }
+        list.innerHTML = alerts.map(function (a) {
+          var label = a.active === false
+            ? esc(a.ticker) + ' \u2014 triggered at ' + naira(a.triggered_price) + ' (off)'
+            : esc(a.ticker) + ' ' + (a.direction === 'below' ? 'at or below ' : 'at or above ') + naira(a.target);
+          return '<div class="alert-row"><span>' + label + '</span>' +
+            '<button type="button" class="btn-ghost" data-alert-del="' + esc(a.id) + '">Remove</button></div>';
+        }).join('');
+      }).catch(function () {
+        err.textContent = 'Could not load alerts. Check your connection.';
+        err.hidden = false;
+      });
+    }
+    document.getElementById('alertsList').addEventListener('click', function (e) {
+      var b = e.target && e.target.closest ? e.target.closest('[data-alert-del]') : null;
+      if (!b) return;
+      var err = document.getElementById('alertsError');
+      err.hidden = true;
+      fetch(API + '/api/alerts?id=' + encodeURIComponent(b.getAttribute('data-alert-del')),
+        { method: 'DELETE', credentials: 'include' }).then(function (res) {
+        return res.json().then(function (out) { return { ok: res.ok, out: out }; });
+      }).then(function (r) {
+        if (!r.ok) { err.textContent = r.out.error || 'Could not remove.'; err.hidden = false; return; }
+        loadAlerts();
+      }).catch(function () {
+        err.textContent = 'Could not remove. Check your connection.';
+        err.hidden = false;
+      });
+    });
+    document.getElementById('tfaEnableBtn').addEventListener('click', function () {
+      fetch(API + '/api/auth/2fa/setup', { method: 'POST', credentials: 'include' })
+        .then(function (res) { return res.json().then(function (out) { return { res: res, out: out }; }); })
+        .then(function (r) {
+          if (!r.res.ok) {
+            document.getElementById('tfaStatus').textContent = 'could not start setup: ' + (r.out.error || 'try again.');
+            return;
+          }
+          document.getElementById('tfaSecret').textContent = r.out.secret;
+          document.getElementById('tfaBackups').textContent = r.out.backup_codes.join('  ');
+          document.getElementById('tfaSetup').hidden = false;
+          document.getElementById('tfaOff').hidden = true;
+        }).catch(function () {
+          document.getElementById('tfaStatus').textContent = 'could not reach the server.';
+        });
+    });
+    document.getElementById('tfaCancelBtn').addEventListener('click', function () {
+      document.getElementById('tfaSetup').hidden = true;
+      document.getElementById('tfaOff').hidden = false;
+    });
+    document.getElementById('tfaVerifyBtn').addEventListener('click', function () {
+      document.getElementById('tfaSetupError').hidden = true;
+      fetch(API + '/api/auth/2fa/verify', {
+        method: 'POST',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: document.getElementById('tfaVerifyCode').value.trim() }),
+      }).then(function (res) { return res.json().then(function (out) { return { res: res, out: out }; }); })
+        .then(function (r) {
+          if (!r.res.ok) { fail('tfaSetupError', r.out.error || 'Could not verify.'); return; }
+          setTfaUI(true);
+        }).catch(function () {
+          fail('tfaSetupError', 'Could not reach the server.');
+        });
+    });
+    document.getElementById('tfaDisableBtn').addEventListener('click', function () {
+      document.getElementById('tfaDisableError').hidden = true;
+      fetch(API + '/api/auth/2fa/disable', {
+        method: 'POST',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code: document.getElementById('tfaDisableCode').value.trim() }),
+      }).then(function (res) { return res.json().then(function (out) { return { res: res, out: out }; }); })
+        .then(function (r) {
+          if (!r.res.ok) { fail('tfaDisableError', r.out.error || 'Could not turn off.'); return; }
+          document.getElementById('tfaDisableCode').value = '';
+          setTfaUI(false);
+        }).catch(function () {
+          fail('tfaDisableError', 'Could not reach the server.');
+        });
+    });
+    }
+  })();
+  </script>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a9f4136dd40547a7b1acca41e62cc7a5"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
