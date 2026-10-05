@@ -974,11 +974,8 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .hero-side { padding-top: 0; }
 }
 .hero {
-  background: linear-gradient(135deg, var(--green-soft), var(--surface-2) 72%);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 34px 36px;
-  margin-top: 22px;
+  padding: 40px 4px 34px;
+  margin-top: 6px;
 }
 .hero::before { top: 0; height: 300px; }
 .hero::after { top: -40px; right: -40px; width: 340px; height: 340px; }
