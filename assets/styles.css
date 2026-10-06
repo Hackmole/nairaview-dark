@@ -945,6 +945,8 @@ a, button { -webkit-tap-highlight-color: transparent; }
   line-height: 1.6;
   color: color-mix(in srgb, var(--ink) 84%, var(--paper));
 }
+/* Screener page hero: larger title, no kicker. */
+.page-hero.hero-screener h1 { font-size: clamp(40px, 6vw, 62px); }
 .status-pill {
   display: inline-flex;
   align-items: center;
