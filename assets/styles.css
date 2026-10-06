@@ -1357,3 +1357,14 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .fx-strip .fx-strip-rate strong { font-weight: 700; }
 .fx-strip .fx-strip-link { margin-left: auto; font-size: 13.5px; font-weight: 600; color: var(--green-strong); text-decoration: none; white-space: nowrap; }
 .fx-strip .fx-strip-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Dark theme: route hardcoded light-palette accents through the new Figma palette */
+:root[data-theme="dark"] .num.down { color: var(--red); }
+:root[data-theme="dark"] .sw.up { background: var(--green); }
+:root[data-theme="dark"] .sw.down { background: var(--red); }
+:root[data-theme="dark"] .fx-card-street { border-color: var(--gold); }
+:root[data-theme="dark"] .fx-tag { background: var(--gold); }
+:root[data-theme="dark"] .fx-line-official { stroke: var(--green); }
+:root[data-theme="dark"] .fx-line-parallel { stroke: var(--gold); }
+:root[data-theme="dark"] .fx-dot-official { background: var(--green); }
+:root[data-theme="dark"] .fx-dot-parallel { background: var(--gold); }
