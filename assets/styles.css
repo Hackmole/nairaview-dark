@@ -496,9 +496,9 @@
 .brand { font: 650 21px/1 "Newsreader", Georgia, serif; color: var(--ink); text-decoration: none; padding: 15px 0; white-space: nowrap; display: inline-flex; align-items: center; }
 .brand span { color: var(--green-strong); }
 .brand img { height: 34px; width: auto; display: block; }
-.site-nav { display: flex; gap: 2px; overflow-x: auto; margin-left: auto; scrollbar-width: none; }
+.site-nav { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; flex: 1; justify-content: center; }
 .site-nav::-webkit-scrollbar { display: none; }
-.site-nav a { font: 600 11.5px/1 "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); text-decoration: none; padding: 19px 11px 17px; white-space: nowrap; border-bottom: 2px solid transparent; }
+.site-nav a { font: 600 10.5px/1 "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); text-decoration: none; padding: 19px 11px 17px; white-space: nowrap; border-bottom: 2px solid transparent; }
 .site-nav a:hover { color: var(--ink); }
 .site-nav a.active { color: var(--green-strong); border-bottom-color: var(--green-strong); }
 .site-nav a[data-authnav] { color: var(--green-strong); }
