@@ -136,7 +136,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      padding: 14px 0 12px;
+      padding: 8px 0 7px;
       border-bottom: 1px solid var(--line);
       font: 500 12px/1.4 "IBM Plex Mono", monospace;
       letter-spacing: .02em;
