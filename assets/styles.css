@@ -136,9 +136,9 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      padding: 8px 0 7px;
+      padding: 2px 0;
       border-bottom: 1px solid var(--line);
-      font: 500 12px/1.4 "IBM Plex Mono", monospace;
+      font: 500 10px/1.4 "IBM Plex Mono", monospace;
       letter-spacing: .02em;
       /* Sticky market-state bar: stays pinned under the sticky header. */
       position: sticky;
