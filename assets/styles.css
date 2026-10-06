@@ -116,6 +116,7 @@
       color: var(--ink);
       font-family: "Public Sans", sans-serif;
       -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
     }
     a { color: inherit; }
     button { font: inherit; }
