@@ -925,7 +925,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
 /* ---- Page hero: content directly on the page, no panel ---- */
 .page-hero {
   margin-top: 22px;
-  padding: 30px 4px;
+  padding: 30px 24px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -969,7 +969,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .hero-side { padding-top: 0; }
 }
 .hero {
-  padding: 40px 4px 34px;
+  padding: 40px 24px 34px;
   margin-top: 6px;
 }
 .hero::before { top: 0; height: 300px; }
@@ -1203,7 +1203,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .breadth-toggle button { flex: 1 1 0; padding: 10px 6px; font-size: 12px; white-space: nowrap; }
   .heatmap { display: grid; grid-template-columns: 1fr 1fr; }
   .heat-tile { min-height: 96px; max-width: none !important; }
-  .page-hero { padding: 24px 4px; margin-top: 16px; }
+  .page-hero { padding: 24px; margin-top: 16px; }
   .quote-hero { padding: 22px 20px; margin-top: 16px; }
   .hero { padding: 26px 20px; margin-top: 16px; }
   .callout { padding: 24px 20px; }
