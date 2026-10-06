@@ -502,8 +502,6 @@
 .site-nav a { font: 600 8px/1 "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); text-decoration: none; padding: 12px 10px 10px; white-space: nowrap; border-bottom: 2px solid transparent; }
 .site-nav a:hover { color: var(--ink); }
 .site-nav a.active { color: var(--green-strong); border-bottom-color: var(--green-strong); }
-.site-nav a[data-authnav] { color: var(--green-strong); }
-:root[data-theme="dark"] .site-nav a[data-authnav] { color: #ffffff; }
 @media (max-width: 700px) {
   .header-inner { flex-wrap: wrap; }
   .site-nav { flex: 1 1 100%; flex-wrap: wrap; overflow-x: visible; margin-left: 0; }
