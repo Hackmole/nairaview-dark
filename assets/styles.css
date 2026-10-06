@@ -794,12 +794,6 @@ a, button { -webkit-tap-highlight-color: transparent; }
     }
     .eyebrow { color: var(--gold); }
 
-    /* Data cards get a gold-green crown: depth cue + brand signature. */
-    .section.card-section { position: relative; overflow: hidden; }
-    .section.card-section::before {
-      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: var(--green);
-    }
     .metric { border-top: 2px solid var(--gold-bright); }
 
     /* Hero: a warm gold aura offset from the green wash. */
