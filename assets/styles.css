@@ -1274,27 +1274,27 @@ a, button { -webkit-tap-highlight-color: transparent; }
 
 /* ---- Dark footer (Figma pattern) ---- */
 .site-footer {
-  background: #102019;
-  color: #dfe9e2;
+  background: #022126;
+  color: #eaf6f7;
   margin-top: 48px;
 }
 .footer-inner { width: min(1560px, calc(100% - 48px)); margin: 0 auto; padding: 44px 0 28px; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
 .footer-brand .brand { color: #fff; padding: 0; }
-.footer-brand p { font-size: 13.5px; color: #a9bcb1; margin: 12px 0 0; max-width: 340px; line-height: 1.6; }
-.footer-x { display: inline-flex; margin-top: 14px; color: #a9bcb1; }
-.footer-x:hover { color: #E8C15A; }
+.footer-brand p { font-size: 13.5px; color: #9fb3b6; margin: 12px 0 0; max-width: 340px; line-height: 1.6; }
+.footer-x { display: inline-flex; margin-top: 14px; color: #9fb3b6; }
+.footer-x:hover { color: #fbe25d; }
 .footer-x svg { display: block; }
-.footer-col h4 { font: 600 11px/1.5 "IBM Plex Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: #8fa398; margin: 0 0 12px; }
-.footer-col a { display: block; color: #dfe9e2; text-decoration: none; font-size: 14px; padding: 5px 0; }
+.footer-col h4 { font: 600 11px/1.5 "IBM Plex Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: #9fb3b6; margin: 0 0 12px; }
+.footer-col a { display: block; color: #eaf6f7; text-decoration: none; font-size: 14px; padding: 5px 0; }
 .footer-col a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
 .footer-legal {
   margin-top: 36px; padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, .14);
+  border-top: 1px solid #22454b;
   display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-  font-size: 12.5px; color: #8fa398;
+  font-size: 12.5px; color: #9fb3b6;
 }
-.footer-legal a { color: #a9bcb1; text-decoration: none; margin-left: 18px; }
+.footer-legal a { color: #9fb3b6; text-decoration: none; margin-left: 18px; }
 .footer-legal a:hover { color: #fff; }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; } }
 
