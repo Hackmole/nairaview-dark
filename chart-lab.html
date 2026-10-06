@@ -14,22 +14,22 @@
   <link rel="icon" href="assets/favicon-96.png" sizes="96x96" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <title>Chart Lab — TradingView-style prototype | Nairaview</title>
-  <link rel="stylesheet" href="assets/styles.css?v=20261006dark25" />
+  <link rel="stylesheet" href="assets/styles.css?v=20261006dark26" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    .tv-wrap{position:relative;height:440px;border:1px solid var(--line,#e5e7eb);border-radius:14px;overflow:hidden;background:var(--card,#fff)}
+    .tv-wrap{position:relative;height:440px;border:1px solid var(--line,#e5e7eb);border-radius:0;overflow:hidden;background:var(--card,#fff)}
     .tv-wrap .tv-err{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:var(--muted,#6b7280)}
     .tv-pane{height:170px;margin-top:12px}
     .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
-    .pill-row button{border:1px solid var(--line,#e5e7eb);background:var(--card,#fff);color:var(--ink,#111827);border-radius:999px;padding:8px 14px;font:600 13px/1.2 "Public Sans",system-ui,sans-serif;cursor:pointer}
+    .pill-row button{border:1px solid var(--line,#e5e7eb);background:var(--card,#fff);color:var(--ink,#111827);border-radius:0;padding:8px 14px;font:600 13px/1.2 "Public Sans",system-ui,sans-serif;cursor:pointer}
     .pill-row button[aria-pressed="true"]{background:#087a4b;border-color:#087a4b;color:#fff}
     .pill-row .row-label{align-self:center;font:600 12px/1 "Public Sans",system-ui,sans-serif;color:var(--muted,#6b7280);text-transform:uppercase;letter-spacing:.06em;margin-right:2px}
     .lab-note{font-size:13px;color:var(--muted,#6b7280);margin-top:10px}
     .lab-search{display:flex;align-items:center;gap:10px;margin:16px 0 2px}
     .lab-search label{font:600 13px/1.2 "Public Sans",system-ui,sans-serif;color:var(--ink,#111827)}
-    .lab-search input{flex:1;max-width:340px;border:1px solid var(--line,#e5e7eb);border-radius:999px;padding:9px 15px;font:500 13px "Public Sans",system-ui,sans-serif;background:var(--card,#fff);color:var(--ink,#111827)}
+    .lab-search input{flex:1;max-width:340px;border:1px solid var(--line,#e5e7eb);border-radius:0;padding:9px 15px;font:500 13px "Public Sans",system-ui,sans-serif;background:var(--card,#fff);color:var(--ink,#111827)}
     .lab-search input::placeholder{color:var(--muted,#6b7280)}
     @media (max-width:640px){.tv-wrap{height:340px}.tv-pane{height:150px}.lab-search input{max-width:none}}
   </style>
@@ -145,7 +145,7 @@
     </div>
   </footer>
   <script src="assets/vendor/lightweight-charts.standalone.production.js"></script>
-  <script src="assets/site.js?v=20261006dark25"></script>
+  <script src="assets/site.js?v=20261006dark26"></script>
   <script>
   (function(){
     "use strict";
