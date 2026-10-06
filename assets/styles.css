@@ -956,10 +956,6 @@ a, button { -webkit-tap-highlight-color: transparent; }
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--green-strong);
-  background: color-mix(in srgb, var(--surface) 78%, transparent);
-  border: 1px solid var(--green);
-  padding: 9px 14px;
-  border-radius: 999px;
 }
 .status-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); flex: none; }
 .status-pill.is-closed .dot { background: var(--muted); }
