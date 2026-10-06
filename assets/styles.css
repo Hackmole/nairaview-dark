@@ -98,12 +98,12 @@
     .theme-toggle {
       margin-left: auto;
       flex: 0 0 auto;
-      width: 40px; height: 40px;
+      width: 24px; height: 24px;
       border-radius: 0;
       border: 1px solid var(--line);
       background: var(--surface);
       color: var(--ink);
-      font-size: 18px; line-height: 1;
+      font-size: 11px; line-height: 1;
       cursor: pointer;
       display: inline-flex; align-items: center; justify-content: center;
     }
