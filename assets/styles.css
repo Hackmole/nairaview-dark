@@ -474,8 +474,10 @@
     .offer-type { font: 600 10px/1 "IBM Plex Mono", monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
     .offer-status { font: 700 10px/1 "IBM Plex Mono", monospace; padding: 6px 11px; border-radius: 0; text-transform: uppercase; letter-spacing: .08em; white-space: nowrap; }
     .st-open { background: var(--green-strong); color: #fff; }
+:root[data-theme="dark"] .st-open { color: #022126; }
     .st-done { background: var(--line); color: var(--muted); }
     .st-delisted { background: var(--red); color: #fff; }
+:root[data-theme="dark"] .st-delisted { color: #022126; }
     .offer-card h3 { font: 650 19px/1.25 "Newsreader", Georgia, serif; margin: 0 0 8px; }
     .offer-detail { color: var(--muted); font-size: 13px; line-height: 1.6; margin: 0 0 8px; }
     .offer-dates { font: 500 11px/1.5 "IBM Plex Mono", monospace; color: var(--muted); margin: 0; }
@@ -1233,6 +1235,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .pchart-pills { display: flex; gap: 8px; margin: 12px 0 4px; flex-wrap: wrap; }
 .pchart-pill { font: 600 11px/1 "IBM Plex Mono", monospace; letter-spacing: .06em; padding: 8px 14px; border: 1px solid var(--line-strong); border-radius: 0; background: transparent; color: var(--muted); cursor: pointer; }
 .pchart-pill[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: #fff; }
+:root[data-theme="dark"] .pchart-pill[aria-pressed="true"] { color: #022126; }
 .pchart-pill:disabled { opacity: .35; cursor: default; }
 .pchart-wrap { position: relative; }
 .pchart-wrap svg { display: block; width: 100%; height: auto; }
@@ -1320,6 +1323,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .fx-ccy-select { font: inherit; font-weight: 700; padding: 10px 14px; border: 1px solid var(--line); border-radius: 0; background: var(--bg); color: var(--ink); }
 .fx-rate-toggle { border: 1px solid var(--line); background: transparent; color: var(--ink); font: inherit; font-weight: 600; font-size: 13.5px; padding: 8px 20px; border-radius: 0; cursor: pointer; }
 .fx-rate-toggle.active { background: var(--green-strong); border-color: var(--green-strong); color: #fff; }
+:root[data-theme="dark"] .fx-rate-toggle.active { color: #022126; }
 .fx-convert-result { font: 650 40px/1.2 "Newsreader", serif; margin: 14px 0 4px; }
 .fx-legend { display: inline-flex; align-items: center; gap: 6px; margin-right: 16px; font-size: 13px; }
 .fx-dot { width: 10px; height: 10px; border-radius: 0; display: inline-block; }
