@@ -616,7 +616,7 @@
           .catch(function () { if (section) section.style.display = 'none'; });
       })();
       document.querySelectorAll('.news-card[data-tickers]').forEach(function (card) {
-        var tickers = card.getAttribute('data-tickers').split(',');
+        var tickers = card.getAttribute('data-tickers').split(',').slice(0, 2);
         var wrap = document.createElement('div');
         wrap.className = 'ticker-chips';
         tickers.forEach(function (t) {
