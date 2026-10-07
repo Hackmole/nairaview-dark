@@ -676,12 +676,12 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .heat-tile:active { transform: scale(.99); }
 .screen-fields input, .screen-fields select { font-family: "Public Sans", system-ui, sans-serif; }
 
-/* Wrapped mobile nav: pill style reads better than underline tabs */
+/* Wrapped mobile nav: bare text links, no boxes */
 @media (max-width: 700px) {
   .header-inner { gap: 0; }
   .site-nav { gap: 6px; padding: 4px 0 10px; }
-  .site-nav a { border: 1px solid var(--line); border-radius: 0; padding: 10px 14px 9px; }
-  .site-nav a.active { border-color: var(--green); background: var(--green-soft); color: var(--green-strong); }
+  .site-nav a { border: 0; background: none; padding: 10px 8px 9px; }
+  .site-nav a.active { border: 0; background: none; color: var(--green-strong); }
 }
 
 /* Small phones */
