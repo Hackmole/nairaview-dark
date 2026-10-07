@@ -1360,3 +1360,10 @@ a, button { -webkit-tap-highlight-color: transparent; }
 :root[data-theme="dark"] .fx-line-parallel { stroke: var(--gold); }
 :root[data-theme="dark"] .fx-dot-official { background: var(--green); }
 :root[data-theme="dark"] .fx-dot-parallel { background: var(--gold); }
+
+/* Palette roles (dark): blue = information, gold = emphasis */
+:root[data-theme="dark"] .source-link,
+:root[data-theme="dark"] .snapshot-note a,
+:root[data-theme="dark"] .read-link { color: var(--blue); }
+:root[data-theme="dark"] .heat-tile .ht-c:not(.up):not(.down) { color: var(--blue); }
+:root[data-theme="dark"] .news-sector { color: var(--gold); border-color: var(--gold); background: var(--gold-soft); }

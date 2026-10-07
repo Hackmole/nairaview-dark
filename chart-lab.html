@@ -14,7 +14,7 @@
   <link rel="icon" href="assets/favicon-96.png" sizes="96x96" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <title>Chart Lab — TradingView-style prototype | Nairaview</title>
-  <link rel="stylesheet" href="assets/styles.css?v=20261007dark33" />
+  <link rel="stylesheet" href="assets/styles.css?v=20261007dark34" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -145,7 +145,7 @@
     </div>
   </footer>
   <script src="assets/vendor/lightweight-charts.standalone.production.js"></script>
-  <script src="assets/site.js?v=20261007dark33"></script>
+  <script src="assets/site.js?v=20261007dark34"></script>
   <script>
   (function(){
     "use strict";
@@ -420,7 +420,7 @@
           }
           var ls = chart.addSeries(LW.LineSeries, { color: "#0e9f6e", lineWidth: 2, title: sym + " %" });
           ls.setData(sPct); chartSeries.push(ls);
-          var as = chart.addSeries(LW.LineSeries, { color: "#c9a227", lineWidth: 2, priceScaleId: "asi", title: "ASI %" });
+          var as = chart.addSeries(LW.LineSeries, { color: "#32d9eb", lineWidth: 2, priceScaleId: "asi", title: "ASI %" });
           as.setData(aPct); chartSeries.push(as);
           chart.priceScale("asi").applyOptions({ scaleMargins: { top: 0.12, bottom: 0.12 } });
         }
