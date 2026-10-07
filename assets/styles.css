@@ -345,11 +345,11 @@
     .ipo-radar p { margin: 0; font-size: 13px; line-height: 1.5; }
     .ipo-radar strong { color: var(--ink); }
     .ipo-radar a { color: var(--amber); font-size: 12px; font-weight: 700; white-space: nowrap; text-underline-offset: 4px; }
-    .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .news-card { display: flex; flex-direction: column; min-height: 245px; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 0; text-decoration: none; }
+    .news-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .news-card { display: flex; flex-direction: column; min-height: 225px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 0; text-decoration: none; }
     .news-card:hover h3 { color: var(--green-strong); }
     .news-meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font: 500 10px/1.4 "IBM Plex Mono", monospace; }
-    .news-card h3 { margin: 22px 0 10px; font: 650 22px/1.12 "Newsreader", serif; transition: color .15s ease; }
+    .news-card h3 { margin: 18px 0 10px; font: 650 19px/1.15 "Newsreader", serif; transition: color .15s ease; }
     .news-card p { color: var(--muted); font-size: 13px; line-height: 1.55; }
     .news-card .arrow { margin-top: auto; color: var(--green-strong); font-size: 18px; }
     .ad-slot { display: none; margin: 0 auto; max-width: 100%; text-align: center; }
