@@ -346,10 +346,10 @@
     .ipo-radar strong { color: var(--ink); }
     .ipo-radar a { color: var(--amber); font-size: 12px; font-weight: 700; white-space: nowrap; text-underline-offset: 4px; }
     .news-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .news-card { display: flex; flex-direction: column; min-height: 225px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 0; text-decoration: none; }
+    .news-card { display: flex; flex-direction: column; min-height: 195px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 0; text-decoration: none; }
     .news-card:hover h3 { color: var(--green-strong); }
     .news-meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font: 500 10px/1.4 "IBM Plex Mono", monospace; }
-    .news-card h3 { margin: 18px 0 10px; font: 650 19px/1.15 "Newsreader", serif; transition: color .15s ease; }
+    .news-card h3 { margin: 14px 0 8px; font: 650 18px/1.15 "Newsreader", serif; transition: color .15s ease; }
     .news-card p { color: var(--muted); font-size: 13px; line-height: 1.55; }
     .news-card .arrow { margin-top: auto; color: var(--green-strong); font-size: 18px; }
     .ad-slot { display: none; margin: 0 auto; max-width: 100%; text-align: center; }
@@ -430,7 +430,7 @@
       .listing { min-height: 210px; }
       .ipo-radar { grid-template-columns: 1fr; gap: 8px; align-items: start; }
       .ipo-radar a { white-space: normal; }
-      .news-card { min-height: 205px; }
+      .news-card { min-height: 180px; }
       .hours { padding: 24px 20px; }
       .footer { display: block; }
       .footer span { display: block; margin-top: 8px; }
@@ -561,8 +561,8 @@
 .movers-table .num { text-align: right; white-space: nowrap; font-family: "IBM Plex Mono", monospace; font-size: 13px; }
 .num.up { color: var(--green-strong); }
 .num.down { color: #c0392b; }
-.ticker-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-.ticker-chip { font: 600 11px "IBM Plex Mono", monospace; background: var(--green-soft); color: var(--green-strong); border-radius: 0; padding: 4px 10px; cursor: pointer; }
+.ticker-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.ticker-chip { font: 600 9px "IBM Plex Mono", monospace; background: var(--green-soft); color: var(--green-strong); border-radius: 0; padding: 2px 7px; cursor: pointer; }
 .stock-price { font: 600 30px "IBM Plex Mono", monospace; color: var(--ink); margin: 10px 0 2px; }
 .asof { font-size: 12.5px; color: var(--muted); margin: 0 0 6px; }
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 14px 0 6px; }
@@ -859,8 +859,8 @@ a, button { -webkit-tap-highlight-color: transparent; }
     ::selection { background: var(--gold-soft); }
 
 /* ---- News thumbnails (original publisher images) ---- */
-.news-thumb { margin: -22px -22px 14px; overflow: hidden; border-radius: 0; background: var(--surface-2); }
-.news-thumb img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.news-thumb { margin: -16px -18px 12px; overflow: hidden; border-radius: 0; background: var(--surface-2); }
+.news-thumb img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 
 /* ---- Price alert widget (stock pages) ---- */
 .alert-widget{margin:18px 0;padding:16px 18px;border:1px solid var(--line);border-radius: 0;background:var(--surface)}
