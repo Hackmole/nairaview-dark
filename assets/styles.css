@@ -311,6 +311,7 @@
     .dir-note { color: var(--muted); font-size: 12px; line-height: 1.6; margin: 14px 0 0; max-width: 720px; }
     .modal-live { display: block; text-align: center; padding: 13px; margin: 0 0 16px; background: var(--green); color: #fff; font-weight: 700; font-size: 13px; text-decoration: none; border-radius: 0; }
     .modal-live:hover { filter: brightness(.94); }
+    :root[data-theme="dark"] .modal-live { color: #022126; }
     .modal-backdrop { position: fixed; inset: 0; z-index: 60; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(10, 20, 14, .55); }
     .modal-backdrop[hidden] { display: none; }
     .modal { position: relative; width: min(430px, 100%); background: var(--surface); border-top: 3px solid var(--green); padding: 28px 28px 24px; box-shadow: var(--shadow); }
