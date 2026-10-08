@@ -299,7 +299,7 @@
     .ticker-item .stk-badge { margin-right: 2px; }
     .heat-tile .stk-badge { margin-bottom: 6px; }
     .stock-head-badged { display: flex; align-items: center; gap: 14px; }
-    .list-tag { display: inline-block; margin-left: 8px; padding: 2px 7px; border: 1px solid var(--line-strong); border-radius: 0; color: var(--muted); font: 600 9px/1.6 "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .05em; vertical-align: 2px; }
+    .list-tag { display: inline-block; margin-left: 5px; padding: 1px 4px; border: 1px solid var(--line-strong); border-radius: 0; color: var(--muted); font: 600 5.4px/1.6 "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .05em; vertical-align: 1px; }
     .empty-note { padding: 30px 22px; color: var(--muted); font-size: 13px; line-height: 1.6; text-align: center; }
     .sector-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 4px; }
     .sector-chip { border: 1px solid var(--line); background: var(--surface); color: var(--muted); border-radius: 0; padding: 8px 14px; font: 600 11px/1 "IBM Plex Mono", monospace; cursor: pointer; }
