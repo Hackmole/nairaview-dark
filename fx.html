@@ -24,7 +24,7 @@
   <link rel="icon" href="assets/favicon-96.png" sizes="96x96" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <title>Currency Exchange Rates to Naira — USD, EUR, GBP | Nairaview</title>
-  <link rel="stylesheet" href="assets/styles.css?v=20261008dark43" />
+  <link rel="stylesheet" href="assets/styles.css?v=20261008dark44" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -90,11 +90,14 @@
           <h2>How much is that in naira?</h2>
           <div class="fx-convert-row">
             <input id="fxAmount" class="fx-amount" type="number" min="0" step="any" value="100" inputmode="decimal" aria-label="Amount" />
-            <select id="fxCcy" class="fx-ccy-select" aria-label="Currency">
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="GBP">GBP</option>
-            </select>
+            <div class="fx-ccy-drop" id="fxCcyDrop">
+              <button type="button" class="fx-ccy-btn" id="fxCcyBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Currency"><span id="fxCcyLabel">USD</span><span aria-hidden="true">▾</span></button>
+              <ul class="fx-ccy-list" id="fxCcyList" role="listbox" aria-label="Currency" hidden>
+                <li role="option" data-ccy="USD" aria-selected="true" tabindex="-1">USD</li>
+                <li role="option" data-ccy="EUR" aria-selected="false" tabindex="-1">EUR</li>
+                <li role="option" data-ccy="GBP" aria-selected="false" tabindex="-1">GBP</li>
+              </ul>
+            </div>
           </div>
           <div class="fx-convert-row">
             <button class="fx-rate-toggle active" data-leg="official" aria-pressed="true">Official</button>
@@ -179,7 +182,7 @@
   </footer>
   <script src="assets/data.js?v=20261007dark39"></script>
   <script src="assets/site.js?v=20261008dark41"></script>
-  <script src="assets/islands.js?v=20261008r4"></script>
+  <script src="assets/islands.js?v=20261008r5"></script>
   <script>window.NV_ISLANDS = window.NV_ISLANDS || {}; window.NV_ISLANDS.fx = true;</script>
 </body>
 </html>
