@@ -17,6 +17,17 @@
   <url><loc>https://nairaview.com/calendar</loc><priority>0.8</priority></url>
   <url><loc>https://nairaview.com/dividends-october-2026</loc><priority>0.8</priority></url>
   <url><loc>https://nairaview.com/news</loc><priority>0.8</priority></url>
+   <url><loc>https://nairaview.com/news-headlines</loc><priority>0.8</priority></url>
+   <url><loc>https://nairaview.com/news-newsroom</loc><priority>0.8</priority></url>
+   <url><loc>https://nairaview.com/news-notes</loc><priority>0.8</priority></url>
+   <url><loc>https://nairaview.com/fx-usd</loc><priority>0.8</priority></url>
+   <url><loc>https://nairaview.com/fx-eur</loc><priority>0.8</priority></url>
+   <url><loc>https://nairaview.com/fx-gbp</loc><priority>0.8</priority></url>
+   <url><loc>https://nairaview.com/watchlist</loc><priority>0.8</priority></url>
+   <url><loc>https://nairaview.com/highs-lows</loc><priority>0.8</priority></url>
+   <url><loc>https://nairaview.com/dividends</loc><priority>0.8</priority></url>
+   <url><loc>https://nairaview.com/corporate-actions</loc><priority>0.8</priority></url>
+   <url><loc>https://nairaview.com/insider-dealings</loc><priority>0.8</priority></url>
   <url><loc>https://nairaview.com/ngx-weekly-recap-26-sep-2026</loc><priority>0.8</priority></url>
   <url><loc>https://nairaview.com/learn</loc><priority>0.7</priority></url>
   <url><loc>https://nairaview.com/learn-what-is-ngx</loc><priority>0.7</priority></url>

@@ -39,7 +39,7 @@
           <a href="screener">Screener</a><div class="nav-item"><a href="fx">FX</a><div class="nav-dropdown" role="menu"><a href="fx">FX converter</a><a href="fx-usd">US dollar</a><a href="fx-eur">Euro</a><a href="fx-gbp">British pound</a></div></div>
           <a href="offers">Offers</a>
           <div class="nav-item"><a href="calendar">Calendar</a><div class="nav-dropdown" role="menu"><a href="calendar">Market calendar</a><a href="dividends">Dividends</a><a href="corporate-actions">Corporate actions</a></div></div>
-          <div class="nav-item"><a href="news" class="active">News</a><div class="nav-dropdown" role="menu"><a href="news">Market news</a><a href="insider-dealings">Insider dealings</a></div></div>
+          <div class="nav-item"><a href="news" class="active">News</a><div class="nav-dropdown" role="menu"><a href="news">Market news</a><a href="news-headlines">Latest headlines</a><a href="news-newsroom">Newsroom</a><a href="news-notes">Market notes</a><a href="insider-dealings">Insider dealings</a></div></div>
           <a href="learn">Learn</a>
           <a href="market-recap">Recap</a>
       </nav>
@@ -66,44 +66,18 @@
               <div>
                 <div class="eyebrow">Newsroom</div>
                 <h1>Market news, sector-tagged.</h1>
-                <p class="lede">The stories moving the NGX.</p>
+                <p class="lede">Pick a desk — headlines, the sector newsroom, or our market notes.</p>
               </div>
             </div>
-            <section class="section" id="liveNewsSection">
-              <details class="collapse">
-                <summary class="collapse-head"><h2>Latest headlines</h2><span class="chev" aria-hidden="true"></span></summary>
-                <div class="collapse-body">
-                  <div class="dir-count" id="liveNewsUpdated" aria-live="polite"></div>
-                  <div class="news-grid" id="liveNewsGrid"></div>
-                </div>
-              </details>
-            </section>
-            <section class="section" id="news">
-              <details class="collapse">
-                <summary class="collapse-head"><h2>Market newsroom</h2><span class="chev" aria-hidden="true"></span></summary>
-                <div class="collapse-body">
-                  <p class="collapse-sub">Market reporting organised by sector. Filter to follow banks, insurers, energy, consumer and industrial names.</p>
-              <div class="news-chips" id="newsChips" role="group" aria-label="Filter news by sector"></div>
-              <div class="dir-count" id="newsCount" aria-live="polite"></div>
-              <div class="news-grid">
-                <a class="news-card" data-sector="banking" data-tickers="GTCO,ZENITHBANK,UBA,ACCESSCORP,FIRSTHOLDCO" href="https://nairametrics.com/2026/09/23/cbns-350bps-rate-cut-reshapes-stocks-bonds-and-bank-earnings-outlook/" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n0.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>NAIRAMETRICS</span><span>23 SEP</span><span class="news-sector">Banking</span></div><h3>CBN’s 350bps rate cut reshapes the outlook for equities, bonds and banks</h3><p>Coverage of how the policy move may alter valuations, yields and bank earnings expectations.</p><span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="news-card" data-sector="market" data-tickers="DANGCEM,SEPLAT" href="https://nairametrics.com/2026/09/23/ngx-market-capitalization-hits-record-n163-06-trillion-as-asi-rises-0-23/" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n1.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>NAIRAMETRICS</span><span>23 SEP</span><span class="news-sector">Market-wide</span></div><h3>Market capitalisation reaches a record ₦163.06tn</h3><p>The ASI gained 0.23% during the session, extending a run of record market values.</p><span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="news-card" data-sector="banking" data-tickers="GTCO,ZENITHBANK,FIRSTHOLDCO,ACCESSCORP" href="https://punchng.com/banking-stock-rally-drives-2-78-ngx-weekly-growth/?utm_source=auto-read-also&amp;utm_medium=web" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n2.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>PUNCH</span><span>W/E 18 SEP</span><span class="news-sector">Banking</span></div><h3>Banking stocks drive 2.78% weekly NGX growth</h3><p>A look at the sector rotation behind the week’s broad-market advance.</p><span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="news-card" data-sector="market" data-tickers="DANGCEM" href="https://nairametrics.com/2026/09/18/ngx-market-cap-hits-n162-trillion-for-the-first-time-ever/" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n3.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>NAIRAMETRICS</span><span>18 SEP</span><span class="news-sector">Market-wide</span></div><h3>NGX market cap crosses ₦162tn for the first time</h3><p>The milestone came amid a broad rise in listed-equity value.</p><span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="news-card" data-sector="oilgas" href="https://punchng.com/just-in-dangote-refinery-opens-n2-15tn-ipo-on-ngx/?amp" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n4.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>PUNCH</span><span>14 SEP</span><span class="news-sector">Oil & Gas</span></div><h3>Dangote Refinery opens ₦2.15tn public offer</h3><p>The offer comprises 4.1 billion new shares at ₦525, with a minimum application of 10 shares.</p><span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="news-card" data-sector="market" href="https://investdata.com.ng/ngx-performance-for-week-ended-august-28-2026-benchmark-sectors-close-positive/" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n5.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>INVESTDATA</span><span>28 AUG</span><span class="news-sector">Market-wide</span></div><h3>Benchmark and sector indices finish the week positive</h3><p>The ASI closed at 241,298.47 for the week ended 28 August.</p><span class="arrow" aria-hidden="true">↗</span></a>          <a class="news-card" data-sector="banking" data-tickers="GTCO,ZENITHBANK,UBA,STANBIC" href="https://nairametrics.com/2026/09/15/nigerian-banks-trade-at-discount-to-african-peers-despite-68-surge/" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n6.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>NAIRAMETRICS</span><span>15 SEP</span><span class="news-sector">Banking</span></div><h3>Nigerian banks trade at discount to African peers despite 68% surge</h3><p>Banking stocks are up 68% in 2026, adding ₦11tn in value — yet several lenders still trade below book value and trail peers in Kenya, South Africa and Ghana on multiples.</p><span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="news-card" data-sector="banking" data-tickers="ACCESSCORP,TRANSCORP,UBA" href="https://nairametrics.com/2026/09/22/bank-stocks-fuel-ngx-surge-as-market-cap-hits-n162-68-trillion/?utm_source=auto-read-also&utm_medium=web" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n7.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>NAIRAMETRICS</span><span>22 SEP</span><span class="news-sector">Banking</span></div><h3>Bank stocks fuel NGX surge as market cap hits ₦162.68tn</h3><p>Tier-1 and tier-2 banks drove volume and value, lifting the Banking Index from 2,658.95 to 2,725.39 points on concentrated buying.</p><span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="news-card" data-sector="insurance" href="https://nairametrics.com/2026/09/05/sunu-assurances-lists-n9-34-billion-new-shares-unveils-ai-driven-growth-strategy-post-recapitalisation/" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n8.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>NAIRAMETRICS</span><span>5 SEP</span><span class="news-sector">Insurance</span></div><h3>SUNU Assurances lists ₦9.34bn new shares, unveils AI-driven growth plan</h3><p>The insurer listed 2.08bn new shares from its ₦4.50 rights issue and is pivoting to AI-led growth in its post-recapitalisation phase.</p><span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="news-card" data-sector="insurance" href="https://nairametrics.com/2026/09/06/six-ngx-companies-list-14-44-billion-new-shares-worth-n37-19-billion/" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n9.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>NAIRAMETRICS</span><span>6 SEP</span><span class="news-sector">Insurance</span></div><h3>Six NGX companies list 14.44bn new shares worth ₦37.19bn</h3><p>Four recapitalised insurers drove 82% of the new listings as private placements and rights issues flooded the market with fresh equity.</p><span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="news-card" data-sector="insurance" href="https://proshare.co/articles/ngx-delists-staco-insurance-following-naicom-licence-revocation?menu=Market&classification=Read&category=Stock" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n10.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>PROSHARE</span><span>21 SEP</span><span class="news-sector">Insurance</span></div><h3>NGX delists STACO Insurance after NAICOM revokes licence</h3><p>The Exchange removed STACO’s securities from the Daily Official List, ending price discovery for the stock after the regulator’s licence revocation.</p><span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="news-card" data-sector="oilgas" data-tickers="SEPLAT" href="https://nairametrics.com/2026/09/02/nigerian-equities-extend-rally-as-asi-crosses-246000-points-gain-n1-22-trillion/" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n11.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>NAIRAMETRICS</span><span>2 SEP</span><span class="news-sector">Oil & Gas</span></div><h3>Equities extend rally as ASI crosses 246,000 points</h3><p>Aradel surged 8.83% and the Oil & Gas Index jumped 3.87% as Seplat and Oando led a broad-based advance.</p><span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="news-card" data-sector="consumer" data-tickers="NB,NESTLE" href="https://nairametrics.com/2026/09/10/ngx-sheds-n1-67-trillion-as-sell-off-deepens-across-sectors/" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n12.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>NAIRAMETRICS</span><span>10 SEP</span><span class="news-sector">Consumer Goods</span></div><h3>NGX sheds ₦1.67tn as sell-off deepens across sectors</h3><p>Nigerian Breweries fell 9.76%, Nestlé 6.51% and Cadbury 9.94% as consumer-goods heavyweights dragged the index lower.</p><span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="news-card" data-sector="industrial" data-tickers="DANGCEM,FIRSTHOLDCO,ZENITHBANK" href="https://nairametrics.com/2026/09/03/ftse-russell-lists-dangote-cement-first-holdco-mtn-zenith-others-in-frontier-index-series/" target="_blank" rel="noopener noreferrer"><div class="news-thumb"><img src="assets/img/news/n13.jpg" alt="" loading="lazy"></div><div class="news-meta"><span>NAIRAMETRICS</span><span>3 SEP</span><span class="news-sector">Industrial Goods</span></div><h3>FTSE Russell lists Dangote Cement, others in Frontier Index Series</h3><p>Nigeria’s return to Frontier Market status puts cement megacaps and other large caps on the global index map from 21 September.</p><span class="arrow" aria-hidden="true">↗</span></a>
-      
+            <section class="section" aria-label="News desks">
+              <div class="fx-grid">
+                <a class="fx-card" href="news-headlines" style="text-decoration:none"><div class="fx-label">Newsroom</div><div class="fx-value" style="font-size:22px">Latest headlines &rarr;</div><div class="fx-sub">The freshest stories, updated through the day</div></a>
+                <a class="fx-card" href="news-newsroom" style="text-decoration:none"><div class="fx-label">Newsroom</div><div class="fx-value" style="font-size:22px">Market newsroom &rarr;</div><div class="fx-sub">Reporting organised by sector</div></a>
+                <a class="fx-card" href="news-notes" style="text-decoration:none"><div class="fx-label">Newsroom</div><div class="fx-value" style="font-size:22px">Market notes &rarr;</div><div class="fx-sub">Nairaview's reading of the tape</div></a>
               </div>
-                </div>
-              </details>
             </section>
+            
+            
             <div class="ad-slot ad-leaderboard" aria-hidden="true">
               <div class="ad-label">Advertisement</div>
               <script>
@@ -117,51 +91,7 @@
 </script>
 <script src="https://www.highrevenueformat.com/66835af5f63b0f5a7059b9333d8d655e/invoke.js"></script>
             </div>
-      <section class="section" id="notes">
-              <details class="collapse">
-                <summary class="collapse-head"><h2>Market notes</h2><span class="chev" aria-hidden="true"></span></summary>
-                <div class="collapse-body">
-                  <p class="collapse-sub">Nairaview&rsquo;s reading of the tape &mdash; short observations on reported market events. Not investment advice.</p>
-              <div class="news-grid">
-                <article class="news-card" data-tickers="TRANSEXPR,VFDGROUP">
-                  <div class="news-meta"><span>NAIRAVIEW</span><span>3 OCT</span><span class="news-sector">Market note</span></div>
-                  <h3>A flat index hid a loud tape</h3>
-                  <p>The ASI slipped just 0.04% on Friday to 251,101.37 &mdash; but underneath, Trans Express gained 10% while VFD Group lost 10%, and 29 stocks advanced against 18 decliners. When the headline barely moves and the small-caps swing both ways, the market is repositioning, not resting. Worth watching into the Dangote offer close on 13 October.</p>
-                </article>
-                <a class="news-card" href="ngx-weekly-recap-26-sep-2026">
-                  <div class="news-meta"><span>NAIRAVIEW</span><span>26 SEP</span><span class="news-sector">Weekly recap</span></div>
-                  <h3>Weekly recap: ASI up 0.9%, market cap at a record &#8358;163tn</h3>
-                  <p>Our first weekly recap: the index close, top gainers and losers of the final session, sector watch, and the corporate actions that mattered &mdash; every Saturday.</p>
-                </a>
-                <article class="news-card" data-tickers="GTCO,ZENITHBANK">
-                  <div class="news-meta"><span>NAIRAVIEW</span><span>26 SEP</span><span class="news-sector">Monetary policy</span></div>
-                  <h3>The 350bp cut trade</h3>
-                  <p>CBN cut the policy rate to 23% on 22 September and T-bill yields fell the next day. The ASI added 0.92% that week as money rotated out of fixed income into equities &mdash; the textbook rate-cut playbook, playing out on schedule.</p>
-                </article>
-                <article class="news-card" data-tickers="GTCO,ZENITHBANK,UBA">
-                  <div class="news-meta"><span>NAIRAVIEW</span><span>15 SEP</span><span class="news-sector">Banking</span></div>
-                  <h3>Banks up 68%, still cheap</h3>
-                  <p>The Banking Index is up 67.96% this year and added roughly &#8358;11 trillion in value &mdash; yet several lenders still trade below book value and trail African peers on earnings multiples. Either the discount is the opportunity, or the market knows something the multiples don&rsquo;t.</p>
-                </article>
-                <article class="news-card">
-                  <div class="news-meta"><span>NAIRAVIEW</span><span>6 SEP</span><span class="news-sector">Insurance</span></div>
-                  <h3>Recapitalisation week</h3>
-                  <p>Four insurers listed 11.79 billion new shares in a single week &mdash; 82% of all new listings &mdash; through rights issues and placements. The insurance recapitalisation wave is no longer a story; it is dilution, and shareholders are living through it.</p>
-                </article>
-                <article class="news-card">
-                  <div class="news-meta"><span>NAIRAVIEW</span><span>10 SEP</span><span class="news-sector">Listings</span></div>
-                  <h3>The IPO cash drain</h3>
-                  <p>The market shed &#8358;3.55 trillion in two sessions as investors set aside cash for the Dangote Refinery offer. Big IPOs don&rsquo;t just add supply later &mdash; they drain liquidity now. Worth remembering when the 13 October close approaches.</p>
-                </article>
-                <article class="news-card" data-tickers="DANGCEM,FIRSTHOLDCO">
-                  <div class="news-meta"><span>NAIRAVIEW</span><span>3 SEP</span><span class="news-sector">Index</span></div>
-                  <h3>Frontier, again</h3>
-                  <p>FTSE Russell&rsquo;s reclassification took effect 21 September with 31 Nigerian stocks eligible for the Frontier index. Passive money tends to land on the largest, most liquid names first &mdash; the same heavyweights already driving the ASI.</p>
-                </article>
-              </div>
-                </div>
-              </details>
-            </section>
+      
     </main>
     </div>
   <footer class="site-footer">
@@ -213,7 +143,6 @@
       <button class="modal-star" id="modalStar" type="button"></button>
     </div>
   </div>
-
 
     <div class="ad-slot ad-sticky-mobile" id="adSticky" aria-hidden="true">
       <button class="ad-close" id="adStickyClose" type="button" aria-label="Close advertisement">×</button>
