@@ -1,0 +1,1466 @@
+{
+ "as_of": "2026-10-08",
+ "window_start": "2026-09-18",
+ "symbols": {
+  "ABBEYBANK": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 7.0,
+   "low": 6.95,
+   "close": 7.05,
+   "off_high_pct": 0.71,
+   "off_low_pct": 1.44
+  },
+  "ABCTRANS": {
+   "sessions": 8,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 7.4,
+   "low": 4.85,
+   "close": 6.05,
+   "off_high_pct": -18.24,
+   "off_low_pct": 24.74
+  },
+  "ACADEMY": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 5.1,
+   "low": 5.1,
+   "close": 5.1,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "ACCESSCORP": {
+   "sessions": 11,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 32.0,
+   "low": 28.95,
+   "close": 29.55,
+   "off_high_pct": -7.66,
+   "off_low_pct": 2.07
+  },
+  "AFRINSURE": {
+   "sessions": 9,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 0.2,
+   "low": 0.2,
+   "close": 0.2,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "AFRIPRUD": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 10.6,
+   "low": 10.6,
+   "close": 10.6,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "AFROMEDIA": {
+   "sessions": 8,
+   "start": "2026-09-28",
+   "end": "2026-10-08",
+   "high": 0.24,
+   "low": 0.24,
+   "close": 0.24,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "AIICO": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 4.18,
+   "low": 3.71,
+   "close": 3.96,
+   "off_high_pct": -5.26,
+   "off_low_pct": 6.74
+  },
+  "AIRTELAFRI": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 6300.0,
+   "low": 6300.0,
+   "close": 6300.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "ALEX": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 9.9,
+   "low": 9.9,
+   "close": 9.9,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "ARADEL": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 1530.0,
+   "low": 1530.0,
+   "close": 1377.0,
+   "off_high_pct": -10.0,
+   "off_low_pct": -10.0
+  },
+  "AUSTINLAZ": {
+   "sessions": 11,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 2.35,
+   "low": 2.2,
+   "close": 2.22,
+   "off_high_pct": -5.53,
+   "off_low_pct": 0.91
+  },
+  "AVACAP": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 5.65,
+   "low": 5.65,
+   "close": 5.65,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "AVAIF": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 1000000.0,
+   "low": 1000000.0,
+   "close": 1000000.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "BAPLC": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 6.25,
+   "low": 6.25,
+   "close": 6.25,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "BERGER": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 147.6,
+   "low": 147.6,
+   "close": 147.6,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "BETAGLAS": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 511.5,
+   "low": 511.5,
+   "close": 511.5,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "BUACEMENT": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 309.0,
+   "low": 287.8,
+   "close": 297.0,
+   "off_high_pct": -3.88,
+   "off_low_pct": 3.2
+  },
+  "BUAFOODS": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 760.6,
+   "low": 760.6,
+   "close": 760.6,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "CADBURY": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 59.5,
+   "low": 59.5,
+   "close": 59.7,
+   "off_high_pct": 0.34,
+   "off_low_pct": 0.34
+  },
+  "CAP": {
+   "sessions": 10,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 100.0,
+   "low": 100.0,
+   "close": 100.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "CAVERTON": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 3.9,
+   "low": 3.9,
+   "close": 3.9,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "CHAMPION": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 10.0,
+   "low": 9.65,
+   "close": 10.95,
+   "off_high_pct": 9.5,
+   "off_low_pct": 13.47
+  },
+  "CHAMS": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 3.42,
+   "low": 3.42,
+   "close": 3.42,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "CHELLARAM": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 9.7,
+   "low": 9.7,
+   "close": 9.7,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "CILEASING": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 5.4,
+   "low": 5.4,
+   "close": 5.4,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "CMFC": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 4.75,
+   "low": 2.5,
+   "close": 3.86,
+   "off_high_pct": -18.74,
+   "off_low_pct": 54.4
+  },
+  "CNIF": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 154.3,
+   "low": 154.3,
+   "close": 154.3,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "CONHALLPLC": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 7.5,
+   "low": 7.12,
+   "close": 7.0,
+   "off_high_pct": -6.67,
+   "off_low_pct": -1.69
+  },
+  "CONOIL": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 210.0,
+   "low": 210.0,
+   "close": 210.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "CORNERST": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 5.6,
+   "low": 4.6,
+   "close": 4.9,
+   "off_high_pct": -12.5,
+   "off_low_pct": 6.52
+  },
+  "CUSTODIAN": {
+   "sessions": 11,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 70.0,
+   "low": 70.0,
+   "close": 70.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "CUTIX": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 2.53,
+   "low": 2.29,
+   "close": 2.44,
+   "off_high_pct": -3.56,
+   "off_low_pct": 6.55
+  },
+  "CWG": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 20.75,
+   "low": 18.0,
+   "close": 18.95,
+   "off_high_pct": -8.67,
+   "off_low_pct": 5.28
+  },
+  "DAARCOMM": {
+   "sessions": 9,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 1.52,
+   "low": 1.39,
+   "close": 1.5,
+   "off_high_pct": -1.32,
+   "off_low_pct": 7.91
+  },
+  "DANGCEM": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 1068.0,
+   "low": 1050.0,
+   "close": 1066.7,
+   "off_high_pct": -0.12,
+   "off_low_pct": 1.59
+  },
+  "DANGSUGAR": {
+   "sessions": 11,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 71.55,
+   "low": 68.0,
+   "close": 70.0,
+   "off_high_pct": -2.17,
+   "off_low_pct": 2.94
+  },
+  "EKOCORP": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 5.8,
+   "low": 5.8,
+   "close": 5.8,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "ELLAHLAKES": {
+   "sessions": 8,
+   "start": "2026-09-28",
+   "end": "2026-10-08",
+   "high": 8.6,
+   "low": 7.4,
+   "close": 8.0,
+   "off_high_pct": -6.98,
+   "off_low_pct": 8.11
+  },
+  "ENAMELWA": {
+   "sessions": 8,
+   "start": "2026-09-28",
+   "end": "2026-10-08",
+   "high": 40.7,
+   "low": 40.7,
+   "close": 40.7,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "ETERNA": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 47.0,
+   "low": 36.5,
+   "close": 41.4,
+   "off_high_pct": -11.91,
+   "off_low_pct": 13.42
+  },
+  "ETI": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 70.0,
+   "low": 65.0,
+   "close": 67.0,
+   "off_high_pct": -4.29,
+   "off_low_pct": 3.08
+  },
+  "ETRANZACT": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 12.6,
+   "low": 11.0,
+   "close": 12.1,
+   "off_high_pct": -3.97,
+   "off_low_pct": 10.0
+  },
+  "EUNISELL": {
+   "sessions": 8,
+   "start": "2026-09-28",
+   "end": "2026-10-08",
+   "high": 189.0,
+   "low": 189.0,
+   "close": 189.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "FCMB": {
+   "sessions": 10,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 11.65,
+   "low": 11.05,
+   "close": 11.0,
+   "off_high_pct": -5.58,
+   "off_low_pct": -0.45
+  },
+  "FIDELITYBK": {
+   "sessions": 11,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 23.5,
+   "low": 18.7,
+   "close": 23.05,
+   "off_high_pct": -1.91,
+   "off_low_pct": 23.26
+  },
+  "FIDSON": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 85.0,
+   "low": 84.05,
+   "close": 83.0,
+   "off_high_pct": -2.35,
+   "off_low_pct": -1.25
+  },
+  "FIRSTHOLDCO": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 165.0,
+   "low": 141.4,
+   "close": 143.65,
+   "off_high_pct": -12.94,
+   "off_low_pct": 1.59
+  },
+  "FTGINSURE": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 1.79,
+   "low": 1.79,
+   "close": 1.79,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "FTNCOCOA": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 8.6,
+   "low": 7.32,
+   "close": 7.5,
+   "off_high_pct": -12.79,
+   "off_low_pct": 2.46
+  },
+  "GEREGU": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 825.7,
+   "low": 825.7,
+   "close": 825.7,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "GOLDBREW": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 7.1,
+   "low": 7.1,
+   "close": 7.1,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "GTCO": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 140.0,
+   "low": 129.6,
+   "close": 131.6,
+   "off_high_pct": -6.0,
+   "off_low_pct": 1.54
+  },
+  "GUINEAINS": {
+   "sessions": 8,
+   "start": "2026-09-28",
+   "end": "2026-10-08",
+   "high": 0.8,
+   "low": 0.68,
+   "close": 0.85,
+   "off_high_pct": 6.25,
+   "off_low_pct": 25.0
+  },
+  "GUINNESS": {
+   "sessions": 13,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 384.8,
+   "low": 384.8,
+   "close": 384.8,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "HBMNG": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 363.9,
+   "low": 350.0,
+   "close": 355.0,
+   "off_high_pct": -2.45,
+   "off_low_pct": 1.43
+  },
+  "HMCALL": {
+   "sessions": 8,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 3.41,
+   "low": 3.0,
+   "close": 3.41,
+   "off_high_pct": 0.0,
+   "off_low_pct": 13.67
+  },
+  "HONYFLOUR": {
+   "sessions": 11,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 18.1,
+   "low": 16.85,
+   "close": 16.9,
+   "off_high_pct": -6.63,
+   "off_low_pct": 0.3
+  },
+  "IKEJAHOTEL": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 44.5,
+   "low": 44.5,
+   "close": 44.5,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "IMG": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 28.0,
+   "low": 28.0,
+   "close": 28.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "INFINITY": {
+   "sessions": 8,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 11.25,
+   "low": 11.25,
+   "close": 11.25,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "INTBREW": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 10.2,
+   "low": 9.55,
+   "close": 9.85,
+   "off_high_pct": -3.43,
+   "off_low_pct": 3.14
+  },
+  "INTENEGINS": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 2.2,
+   "low": 2.2,
+   "close": 2.2,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "JAIZBANK": {
+   "sessions": 10,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 9.0,
+   "low": 7.8,
+   "close": 8.2,
+   "off_high_pct": -8.89,
+   "off_low_pct": 5.13
+  },
+  "JAPAULGOLD": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 2.91,
+   "low": 2.36,
+   "close": 2.57,
+   "off_high_pct": -11.68,
+   "off_low_pct": 8.9
+  },
+  "JBERGER": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 310.8,
+   "low": 310.8,
+   "close": 310.8,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "JOHNHOLT": {
+   "sessions": 8,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 8.75,
+   "low": 7.75,
+   "close": 8.75,
+   "off_high_pct": 0.0,
+   "off_low_pct": 12.9
+  },
+  "JULI": {
+   "sessions": 8,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 6.55,
+   "low": 6.55,
+   "close": 6.55,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "LASACO": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 1.8,
+   "low": 1.8,
+   "close": 1.8,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "LEARNAFRCA": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 9.15,
+   "low": 9.15,
+   "close": 9.15,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "LEGENDINT": {
+   "sessions": 8,
+   "start": "2026-09-28",
+   "end": "2026-10-08",
+   "high": 3.65,
+   "low": 3.3,
+   "close": 3.65,
+   "off_high_pct": 0.0,
+   "off_low_pct": 10.61
+  },
+  "LINKASSURE": {
+   "sessions": 8,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 1.85,
+   "low": 1.62,
+   "close": 1.65,
+   "off_high_pct": -10.81,
+   "off_low_pct": 1.85
+  },
+  "LIVESTOCK": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 11.2,
+   "low": 11.2,
+   "close": 11.2,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "LIVINGTRUST": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 3.2,
+   "low": 3.2,
+   "close": 3.2,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "MANSARD": {
+   "sessions": 11,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 11.7,
+   "low": 11.0,
+   "close": 10.6,
+   "off_high_pct": -9.4,
+   "off_low_pct": -3.64
+  },
+  "MAYBAKER": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 41.3,
+   "low": 39.2,
+   "close": 39.2,
+   "off_high_pct": -5.08,
+   "off_low_pct": 0.0
+  },
+  "MBENEFIT": {
+   "sessions": 11,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 3.5,
+   "low": 3.01,
+   "close": 3.11,
+   "off_high_pct": -11.14,
+   "off_low_pct": 3.32
+  },
+  "MCNICHOLS": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 5.0,
+   "low": 5.0,
+   "close": 5.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "MECURE": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 56.2,
+   "low": 56.2,
+   "close": 56.2,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "MEYER": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 15.95,
+   "low": 15.95,
+   "close": 15.95,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "MOFIREIF": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 100.0,
+   "low": 100.0,
+   "close": 100.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "MORISON": {
+   "sessions": 8,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 10.4,
+   "low": 10.4,
+   "close": 10.4,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "MTNN": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 890.0,
+   "low": 836.0,
+   "close": 848.0,
+   "off_high_pct": -4.72,
+   "off_low_pct": 1.44
+  },
+  "MULTITREX": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 0.39,
+   "low": 0.39,
+   "close": 0.39,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "MULTIVERSE": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 19.2,
+   "low": 19.2,
+   "close": 19.2,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "NAHCO": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 152.45,
+   "low": 136.25,
+   "close": 150.0,
+   "off_high_pct": -1.61,
+   "off_low_pct": 10.09
+  },
+  "NASCON": {
+   "sessions": 11,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 188.9,
+   "low": 176.0,
+   "close": 188.9,
+   "off_high_pct": 0.0,
+   "off_low_pct": 7.33
+  },
+  "NB": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 77.9,
+   "low": 73.8,
+   "close": 74.0,
+   "off_high_pct": -5.01,
+   "off_low_pct": 0.27
+  },
+  "NCR": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 161.2,
+   "low": 161.2,
+   "close": 161.2,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "NEIMETH": {
+   "sessions": 8,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 8.9,
+   "low": 7.45,
+   "close": 6.95,
+   "off_high_pct": -21.91,
+   "off_low_pct": -6.71
+  },
+  "NEM": {
+   "sessions": 10,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 29.5,
+   "low": 28.7,
+   "close": 29.5,
+   "off_high_pct": 0.0,
+   "off_low_pct": 2.79
+  },
+  "NESTLE": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 2750.0,
+   "low": 2750.0,
+   "close": 2750.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "NGXGROUP": {
+   "sessions": 11,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 185.0,
+   "low": 166.1,
+   "close": 168.0,
+   "off_high_pct": -9.19,
+   "off_low_pct": 1.14
+  },
+  "NIDF": {
+   "sessions": 11,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 147.7,
+   "low": 147.7,
+   "close": 147.7,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "NNFM": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 79.4,
+   "low": 79.4,
+   "close": 79.4,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "NPFMCRFBK": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 4.6,
+   "low": 4.6,
+   "close": 4.6,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "NREIT": {
+   "sessions": 10,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 113.0,
+   "low": 113.0,
+   "close": 113.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "NSLTECH": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 0.69,
+   "low": 0.69,
+   "close": 0.69,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "OANDO": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 36.15,
+   "low": 34.15,
+   "close": 34.05,
+   "off_high_pct": -5.81,
+   "off_low_pct": -0.29
+  },
+  "OKOMUOIL": {
+   "sessions": 11,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 1276.2,
+   "low": 1276.2,
+   "close": 1276.2,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "OMATEK": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 1.46,
+   "low": 1.46,
+   "close": 1.46,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "PHARMDEKO": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 1.83,
+   "low": 1.83,
+   "close": 1.83,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "PREMPAINTS": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 30.4,
+   "low": 30.4,
+   "close": 30.4,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "PRESCO": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 2045.3,
+   "low": 2045.3,
+   "close": 2045.3,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "PRESTIGE": {
+   "sessions": 8,
+   "start": "2026-09-28",
+   "end": "2026-10-08",
+   "high": 1.4,
+   "low": 1.36,
+   "close": 1.36,
+   "off_high_pct": -2.86,
+   "off_low_pct": 0.0
+  },
+  "PZ": {
+   "sessions": 10,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 74.7,
+   "low": 66.35,
+   "close": 69.0,
+   "off_high_pct": -7.63,
+   "off_low_pct": 3.99
+  },
+  "REDSTAREX": {
+   "sessions": 8,
+   "start": "2026-09-28",
+   "end": "2026-10-08",
+   "high": 15.8,
+   "low": 14.85,
+   "close": 14.85,
+   "off_high_pct": -6.01,
+   "off_low_pct": 0.0
+  },
+  "REGALINS": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 0.7,
+   "low": 0.7,
+   "close": 0.7,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "RONCHESS": {
+   "sessions": 8,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 81.0,
+   "low": 81.0,
+   "close": 81.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "ROYALEX": {
+   "sessions": 8,
+   "start": "2026-09-28",
+   "end": "2026-10-08",
+   "high": 1.15,
+   "low": 0.98,
+   "close": 1.02,
+   "off_high_pct": -11.3,
+   "off_low_pct": 4.08
+  },
+  "RTBRISCOE": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 10.0,
+   "low": 10.0,
+   "close": 10.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "SCOA": {
+   "sessions": 8,
+   "start": "2026-09-28",
+   "end": "2026-10-08",
+   "high": 33.05,
+   "low": 33.05,
+   "close": 33.05,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "SEPLAT": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 16000.1,
+   "low": 16000.0,
+   "close": 16000.1,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "SFSREIT": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 418.75,
+   "low": 418.75,
+   "close": 418.75,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "SKYAVN": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 171.2,
+   "low": 171.2,
+   "close": 171.2,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "SOVRENINS": {
+   "sessions": 8,
+   "start": "2026-09-28",
+   "end": "2026-10-08",
+   "high": 2.88,
+   "low": 2.0,
+   "close": 2.13,
+   "off_high_pct": -26.04,
+   "off_low_pct": 6.5
+  },
+  "STANBIC": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 166.7,
+   "low": 153.0,
+   "close": 163.9,
+   "off_high_pct": -1.68,
+   "off_low_pct": 7.12
+  },
+  "STERLINGNG": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 77.0,
+   "low": 7.7,
+   "close": 77.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 900.0
+  },
+  "SUNUASSUR": {
+   "sessions": 8,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 3.3,
+   "low": 3.08,
+   "close": 3.25,
+   "off_high_pct": -1.52,
+   "off_low_pct": 5.52
+  },
+  "TANTALIZER": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 4.09,
+   "low": 3.79,
+   "close": 3.78,
+   "off_high_pct": -7.58,
+   "off_low_pct": -0.26
+  },
+  "THOMASWY": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 2.41,
+   "low": 2.41,
+   "close": 2.41,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "TIP": {
+   "sessions": 10,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 28.5,
+   "low": 25.5,
+   "close": 25.4,
+   "off_high_pct": -10.88,
+   "off_low_pct": -0.39
+  },
+  "TOTAL": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 518.4,
+   "low": 518.4,
+   "close": 518.4,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "TRANSCOHOT": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 290.5,
+   "low": 290.5,
+   "close": 290.5,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "TRANSCORP": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 37.4,
+   "low": 36.1,
+   "close": 36.0,
+   "off_high_pct": -3.74,
+   "off_low_pct": -0.28
+  },
+  "TRANSEXPR": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 3.0,
+   "low": 2.7,
+   "close": 2.97,
+   "off_high_pct": -1.0,
+   "off_low_pct": 10.0
+  },
+  "TRANSPOWER": {
+   "sessions": 13,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 178.0,
+   "low": 178.0,
+   "close": 178.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "TRIPPLEG": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 3.39,
+   "low": 3.39,
+   "close": 3.39,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "UACN": {
+   "sessions": 11,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 181.0,
+   "low": 171.5,
+   "close": 181.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 5.54
+  },
+  "UBA": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 47.0,
+   "low": 44.2,
+   "close": 44.2,
+   "off_high_pct": -5.96,
+   "off_low_pct": 0.0
+  },
+  "UCAP": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 18.0,
+   "low": 17.0,
+   "close": 17.2,
+   "off_high_pct": -4.44,
+   "off_low_pct": 1.18
+  },
+  "UHOMREIT": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 70.0,
+   "low": 70.0,
+   "close": 70.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "UNILEVER": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 109.9,
+   "low": 95.0,
+   "close": 100.0,
+   "off_high_pct": -9.01,
+   "off_low_pct": 5.26
+  },
+  "UNIONDICON": {
+   "sessions": 8,
+   "start": "2026-09-25",
+   "end": "2026-10-08",
+   "high": 23.75,
+   "low": 23.75,
+   "close": 23.75,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "UNITYBNK": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 1.51,
+   "low": 1.51,
+   "close": 1.51,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "UNIVINSURE": {
+   "sessions": 8,
+   "start": "2026-09-28",
+   "end": "2026-10-08",
+   "high": 0.77,
+   "low": 0.77,
+   "close": 0.77,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "UPDC": {
+   "sessions": 11,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 4.5,
+   "low": 3.55,
+   "close": 4.1,
+   "off_high_pct": -8.89,
+   "off_low_pct": 15.49
+  },
+  "UPDCREIT": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 20.95,
+   "low": 18.6,
+   "close": 22.45,
+   "off_high_pct": 7.16,
+   "off_low_pct": 20.7
+  },
+  "UPL": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 5.15,
+   "low": 5.15,
+   "close": 5.15,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "VERITASKAP": {
+   "sessions": 1,
+   "start": "2026-10-08",
+   "end": "2026-10-08",
+   "high": 1.1,
+   "low": 1.1,
+   "close": 1.1,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "VFDGROUP": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 15.0,
+   "low": 11.0,
+   "close": 12.2,
+   "off_high_pct": -18.67,
+   "off_low_pct": 10.91
+  },
+  "VITAFOAM": {
+   "sessions": 11,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 194.0,
+   "low": 194.0,
+   "close": 194.0,
+   "off_high_pct": 0.0,
+   "off_low_pct": 0.0
+  },
+  "WAPIC": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 2.43,
+   "low": 2.2,
+   "close": 2.48,
+   "off_high_pct": 2.06,
+   "off_low_pct": 12.73
+  },
+  "WEMABANK": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 32.2,
+   "low": 30.0,
+   "close": 31.0,
+   "off_high_pct": -3.73,
+   "off_low_pct": 3.33
+  },
+  "ZENITHBANK": {
+   "sessions": 14,
+   "start": "2026-09-18",
+   "end": "2026-10-08",
+   "high": 136.3,
+   "low": 128.0,
+   "close": 136.0,
+   "off_high_pct": -0.22,
+   "off_low_pct": 6.25
+  },
+  "ZICHIS": {
+   "sessions": 8,
+   "start": "2026-09-23",
+   "end": "2026-10-08",
+   "high": 21.09,
+   "low": 16.0,
+   "close": 17.05,
+   "off_high_pct": -19.16,
+   "off_low_pct": 6.56
+  }
+ }
+}

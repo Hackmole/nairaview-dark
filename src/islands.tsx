@@ -23,6 +23,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Screener from './islands/Screener.js';
+import Watchlist from './islands/Watchlist.js';
+import HighsLows from './islands/HighsLows.js';
+import Dividends from './islands/Dividends.js';
+import CorpActions from './islands/CorpActions.js';
+import InsiderDeals from './islands/InsiderDeals.js';
 import ChartLab from './islands/ChartLab.js';
 import Portfolio from './islands/Portfolio.js';
 import FxConverter from './islands/FxConverter.js';
@@ -32,6 +37,11 @@ type IslandComponent = React.ComponentType<Record<string, string | undefined>>;
 
 const ISLANDS: Record<string, IslandComponent> = {
   screener: Screener as IslandComponent,
+  watchlist: Watchlist as IslandComponent,
+  'highs-lows': HighsLows as IslandComponent,
+  dividends: Dividends as IslandComponent,
+  'corp-actions': CorpActions as IslandComponent,
+  'insider-deals': InsiderDeals as IslandComponent,
   'chart-lab': ChartLab as IslandComponent,
   portfolio: Portfolio as IslandComponent,
   'fx-converter': FxConverter as IslandComponent,
@@ -42,6 +52,10 @@ const ISLANDS: Record<string, IslandComponent> = {
    content element — createRoot() would wipe its children. */
 const ADOPT: Record<string, boolean> = {
   'chart-lab': true,
+  'highs-lows': true,
+  dividends: true,
+  'corp-actions': true,
+  'insider-deals': true,
   'fx-converter': true,
   'fx-ccy': true,
 };

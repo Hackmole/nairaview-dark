@@ -30,6 +30,20 @@ interface FilterState {
   sort: string;
 }
 
+interface Preset {
+  id: string;
+  label: string;
+  f: FilterState;
+}
+
+const PRESETS: Preset[] = [
+  { id: 'gainers', label: 'Top gainers', f: { mover: 'gainers', sector: 'All', minP: '', maxP: '', minC: '', maxC: '', sort: 'chg-desc' } },
+  { id: 'losers', label: 'Top losers', f: { mover: 'losers', sector: 'All', minP: '', maxP: '', minC: '', maxC: '', sort: 'chg-asc' } },
+  { id: 'active', label: 'Most traded', f: { mover: 'volume', sector: 'All', minP: '', maxP: '', minC: '', maxC: '', sort: 'vol-desc' } },
+  { id: 'oversold', label: 'Oversold', f: { mover: 'losers', sector: 'All', minP: '', maxP: '', minC: '-10', maxC: '-3', sort: 'chg-asc' } },
+  { id: 'penny', label: 'Under ₦5', f: { mover: 'all', sector: 'All', minP: '', maxP: '5', minC: '', maxC: '', sort: 'price-asc' } },
+];
+
 function readWatchlist(): string[] {
   try { return JSON.parse(localStorage.getItem('ngxWatchlist') || '[]') as string[]; }
   catch { return []; }
@@ -88,6 +102,7 @@ export default function Screener(): React.ReactElement {
     Array.isArray(window.directory) ? window.directory.slice() : []);
   const [watch, setWatch] = useState<string[]>(readWatchlist);
   const [f, setF] = useState<FilterState>({ mover: 'all', sector: 'All', minP: '', maxP: '', minC: '', maxC: '', sort: 'chg-desc' });
+  const [activePreset, setActivePreset] = useState<string | null>(null);
 
   const sectors = useMemo(() => {
     const s: Record<string, boolean> = {};
@@ -117,7 +132,7 @@ export default function Screener(): React.ReactElement {
 
   /* Wire the static controls into React state. */
   useEffect(() => {
-    function sync() {
+    function sync(fromPreset: boolean) {
       const pressed = document.querySelector('#screenMover .sector-chip[aria-pressed="true"]') as HTMLElement | null;
       setF({
         mover: (pressed && pressed.dataset.mover) || 'all',
@@ -126,7 +141,9 @@ export default function Screener(): React.ReactElement {
         minC: inputVal('screenMinC'), maxC: inputVal('screenMaxC'),
         sort: inputVal('screenSort') || 'chg-desc',
       });
+      if (!fromPreset) setActivePreset(null);
     }
+    const doSync = () => sync(false);
     const host = document.getElementById('screenMover');
     function onChip(e: Event) {
       const b = (e.target as HTMLElement).closest('.sector-chip') as HTMLElement | null;
@@ -134,7 +151,7 @@ export default function Screener(): React.ReactElement {
       host.querySelectorAll('.sector-chip').forEach((c) => {
         c.setAttribute('aria-pressed', c === b ? 'true' : 'false');
       });
-      sync();
+      doSync();
     }
     if (host) host.addEventListener('click', onChip);
     const ids = ['screenSector', 'screenMinP', 'screenMaxP', 'screenMinC', 'screenMaxC', 'screenSort'];
@@ -142,12 +159,55 @@ export default function Screener(): React.ReactElement {
       .map((id) => document.getElementById(id))
       .filter((e): e is HTMLElement => !!e);
     els.forEach((el) => {
-      el.addEventListener('change', sync); el.addEventListener('input', sync);
+      el.addEventListener('change', doSync); el.addEventListener('input', doSync);
     });
-    sync();
+
+    /* preset buttons: one-tap screens */
+    const presetHost = document.getElementById('presetRow');
+    function setControl(id: string, value: string) {
+      const c = document.getElementById(id) as HTMLInputElement | HTMLSelectElement | null;
+      if (c) c.value = value;
+    }
+    function onPreset(e: Event) {
+      const b = (e.target as HTMLElement).closest('.preset-chip') as HTMLElement | null;
+      if (!b || !presetHost) return;
+      const preset = PRESETS.find((p) => p.id === b.dataset.preset);
+      if (!preset) return;
+      presetHost.querySelectorAll('.preset-chip').forEach((c) => {
+        c.setAttribute('aria-pressed', c === b ? 'true' : 'false');
+      });
+      if (host) host.querySelectorAll('.sector-chip').forEach((c) => {
+        c.setAttribute('aria-pressed', (c as HTMLElement).dataset.mover === preset.f.mover ? 'true' : 'false');
+      });
+      setControl('screenSector', preset.f.sector);
+      setControl('screenMinP', preset.f.minP);
+      setControl('screenMaxP', preset.f.maxP);
+      setControl('screenMinC', preset.f.minC);
+      setControl('screenMaxC', preset.f.maxC);
+      setControl('screenSort', preset.f.sort);
+      setF({ ...preset.f });
+      setActivePreset(preset.id);
+    }
+    if (presetHost && !presetHost.children.length) {
+      const lab = document.createElement('span');
+      lab.className = 'preset-label';
+      lab.textContent = 'Presets';
+      presetHost.appendChild(lab);
+      PRESETS.forEach((p) => {
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'preset-chip'; b.textContent = p.label;
+        b.dataset.preset = p.id;
+        b.setAttribute('aria-pressed', 'false');
+        presetHost.appendChild(b);
+      });
+      presetHost.addEventListener('click', onPreset);
+    }
+
+    doSync();
     return () => {
       if (host) host.removeEventListener('click', onChip);
-      els.forEach((el) => { el.removeEventListener('change', sync); el.removeEventListener('input', sync); });
+      els.forEach((el) => { el.removeEventListener('change', doSync); el.removeEventListener('input', doSync); });
+      if (presetHost) presetHost.removeEventListener('click', onPreset);
     };
   }, []);
 

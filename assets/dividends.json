@@ -1,0 +1,66 @@
+{
+ "dividends": [
+  {
+   "amount": 2.5,
+   "company": "PZ Cussons Nigeria Plc",
+   "payment_date": "2026-10-30",
+   "period": "Final, FY2026",
+   "qualification_date": "2026-10-09",
+   "register_closure": "2026-10-12 to 2026-10-16",
+   "source": "Nairametrics",
+   "ticker": "PZ"
+  },
+  {
+   "amount": 1.0,
+   "company": "Guaranty Trust Holding Company Plc",
+   "payment_date": "2026-10-20",
+   "period": "Interim, H1 2026",
+   "qualification_date": "2026-10-12",
+   "register_closure": "2026-10-13",
+   "source": "Company announcement via Investegate/Sharecast",
+   "ticker": "GTCO"
+  },
+  {
+   "amount": 0.4,
+   "company": "Transnational Corporation Plc",
+   "payment_date": "2026-07-28",
+   "period": "Interim, H1 2026",
+   "qualification_date": "2026-07-23",
+   "register_closure": null,
+   "source": "Business Post Nigeria",
+   "ticker": "TRANSCORP"
+  },
+  {
+   "amount": 45.0,
+   "company": "Dangote Cement Plc",
+   "payment_date": "2026-07-02",
+   "period": "Final, FY2025",
+   "qualification_date": "2026-06-17",
+   "register_closure": null,
+   "source": "Investors King; Proshare",
+   "ticker": "DANGCEM"
+  },
+  {
+   "amount": 1.6,
+   "company": "Transnational Corporation Plc",
+   "payment_date": "2026-05-08",
+   "period": "Final, FY2025",
+   "qualification_date": "2026-04-27",
+   "register_closure": null,
+   "source": "Economy Post; Premium Times",
+   "ticker": "TRANSCORP"
+  },
+  {
+   "amount": 4.0,
+   "company": "Transcorp Power Plc",
+   "payment_date": "2026-05-05",
+   "period": "Final, FY2025",
+   "qualification_date": "2026-04-17",
+   "register_closure": null,
+   "source": "Investors King",
+   "ticker": "TRANSPOWER"
+  }
+ ],
+ "note": "Curated from NGX disclosures and Nigerian business press (Sep-Oct 2026 research). Amounts in naira per share. Only verified items are listed.",
+ "updated": "2026-10-08"
+}
