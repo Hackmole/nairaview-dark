@@ -1,5 +1,5 @@
 {
-  "name": "nairaview-dark-islands",
+  "name": "nairaview-v2-islands",
   "private": true,
   "version": "1.0.0",
   "description": "React islands for the Nairaview dark site (V2). Static HTML stays SEO-safe; React mounts on [data-island] regions.",
