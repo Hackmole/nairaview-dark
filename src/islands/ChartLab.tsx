@@ -52,7 +52,7 @@ function themeOpts() {
     layout: {
       background: { type: ColorType.Solid, color: 'transparent' },
       textColor: dark ? '#c9d4e3' : '#3c4756',
-      fontFamily: "'Public Sans', system-ui, sans-serif",
+      fontFamily: "'Barlow', sans-serif",
       fontSize: 12,
     },
     grid: {
