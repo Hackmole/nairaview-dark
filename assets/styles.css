@@ -558,7 +558,8 @@
 .movers-table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 0; overflow: hidden; font-size: 14px; }
 .movers-table td { padding: 10px 12px; border-bottom: 1px solid var(--line); }
 .movers-table tr:last-child td { border-bottom: 0; }
-#insiderTable thead th { position: sticky; top: calc(var(--header-h) + 20px); z-index: 5; background: var(--surface); }
+#insiderTable { border-collapse: separate; border-spacing: 0; }
+#insiderTable thead th { position: sticky; top: calc(var(--header-h) + 26px); z-index: 5; background: var(--surface); }
 .movers-table .num { text-align: right; white-space: nowrap; font-family: "IBM Plex Mono", monospace; font-size: 13px; }
 .num.up { color: var(--green-strong); }
 .num.down { color: #c0392b; }
