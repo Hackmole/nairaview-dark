@@ -957,3 +957,68 @@
         })
         .catch(function () { signin.hidden = false; });
     }());
+
+/* ---- Nav dropdowns: hover reveals (CSS), click toggles, parent highlights on child pages ---- */
+(function () {
+  var nav = document.querySelector('.site-nav');
+  if (!nav) return;
+  var items = Array.prototype.slice.call(nav.querySelectorAll('.nav-item'));
+  if (!items.length) return;
+
+  function closeAll(except) {
+    items.forEach(function (it) {
+      if (it !== except) it.classList.remove('open');
+      var link = it.querySelector(':scope > a');
+      if (link && it !== except) link.setAttribute('aria-expanded', 'false');
+    });
+    if (!except) nav.classList.remove('drop-open');
+  }
+
+  items.forEach(function (it) {
+    var link = it.querySelector(':scope > a');
+    var drop = it.querySelector(':scope > .nav-dropdown');
+    if (!link || !drop) return;
+    link.setAttribute('aria-haspopup', 'true');
+    link.setAttribute('aria-expanded', 'false');
+
+    it.addEventListener('mouseenter', function () {
+      nav.classList.add('drop-open');
+      link.setAttribute('aria-expanded', 'true');
+    });
+    it.addEventListener('mouseleave', function () {
+      link.setAttribute('aria-expanded', 'false');
+      if (!nav.querySelector('.nav-item.open')) nav.classList.remove('drop-open');
+    });
+
+    /* first click opens the menu, second click follows the parent link */
+    link.addEventListener('click', function (e) {
+      if (!it.classList.contains('open')) {
+        e.preventDefault();
+        closeAll(it);
+        it.classList.add('open');
+        nav.classList.add('drop-open');
+        link.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.nav-item')) closeAll(null);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeAll(null);
+  });
+
+  /* highlight the parent when on a dropdown child page */
+  var seg = location.pathname.split('/').pop().replace(/\.html$/, '');
+  var childToParent = {
+    'highs-lows': 'stocks', 'watchlist': 'stocks',
+    'dividends': 'calendar', 'corporate-actions': 'calendar',
+    'insider-dealings': 'news'
+  };
+  var parent = childToParent[seg];
+  if (parent) {
+    var plink = nav.querySelector('.nav-item > a[href$="' + parent + '"]');
+    if (plink) plink.classList.add('active');
+  }
+}());
