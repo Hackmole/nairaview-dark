@@ -1319,6 +1319,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .fx-convert-card h2 { margin: 6px 0 18px; }
 .fx-convert-row { display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
 .fx-amount { flex: 1 1 160px; font: inherit; font-size: 20px; font-weight: 700; padding: 10px 14px; border: 1px solid var(--line); border-radius: 0; background: var(--bg); color: var(--ink); min-width: 0; }
+select option { background-color: var(--bg); color: var(--ink); }
 .fx-ccy-select { font: inherit; font-weight: 700; padding: 10px 14px; border: 1px solid var(--line); border-radius: 0; background: var(--bg); color: var(--ink); }
 .fx-rate-toggle { border: 1px solid var(--line); background: transparent; color: var(--ink); font: inherit; font-weight: 600; font-size: 13.5px; padding: 8px 20px; border-radius: 0; cursor: pointer; }
 .fx-rate-toggle.active { background: var(--green-strong); border-color: var(--green-strong); color: #fff; }
