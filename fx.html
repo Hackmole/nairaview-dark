@@ -84,7 +84,7 @@
         <div><span class="status-pill"><span class="dot"></span><span id="fxHeroDate">Updated daily</span></span></div>
       </div>
 
-      <section class="section fx-convert" aria-label="Currency converter">
+      <section class="section fx-convert" aria-label="Currency converter" data-island="fx-converter">
         <div class="fx-convert-card">
           <div class="eyebrow">Converter</div>
           <h2>How much is that in naira?</h2>
@@ -105,7 +105,7 @@
         </div>
       </section>
 
-      <section class="section fx-ccy" aria-label="US dollar to naira">
+      <section class="section fx-ccy" aria-label="US dollar to naira" data-island="fx-ccy" data-ccy="USD">
         <div class="section-heading">
           <div><div class="kicker">USD / NGN</div><h2>Dollar to naira.</h2></div>
         </div>
@@ -134,7 +134,7 @@
         </div>
       </section>
 
-      <section class="section fx-ccy" aria-label="Euro to naira">
+      <section class="section fx-ccy" aria-label="Euro to naira" data-island="fx-ccy" data-ccy="EUR">
         <div class="section-heading">
           <div><div class="kicker">EUR / NGN</div><h2>Euro to naira.</h2></div>
         </div>
@@ -163,7 +163,7 @@
         </div>
       </section>
 
-      <section class="section fx-ccy" aria-label="British pound to naira">
+      <section class="section fx-ccy" aria-label="British pound to naira" data-island="fx-ccy" data-ccy="GBP">
         <div class="section-heading">
           <div><div class="kicker">GBP / NGN</div><h2>Pound to naira.</h2></div>
         </div>
@@ -250,11 +250,14 @@
   </footer>
   <script src="assets/data.js?v=20261007dark39"></script>
   <script src="assets/site.js?v=20261007dark39"></script>
+  <script src="assets/islands.js?v=20261008r1"></script>
+  <script>window.NV_ISLANDS = window.NV_ISLANDS || {}; window.NV_ISLANDS.fx = true;</script>
   <script>
   /* FX page: fetch /api/fx and paint all three currency sections.
      Fully guarded — static "₦—" placeholders stay if the feed fails. */
   (function () {
     'use strict';
+    if (window.NV_ISLANDS && window.NV_ISLANDS.fx) return;
     var API = 'https://nairaview-api.meetomidiora.workers.dev';
     var CCYS = ['USD', 'EUR', 'GBP'];
     function $(id) { return document.getElementById(id); }

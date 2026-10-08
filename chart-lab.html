@@ -56,7 +56,7 @@
       <span class="topline-date">CHART LAB &middot; NOT IN SITE NAV</span>
     </div>
     <main>
-      <section class="section">
+      <section class="section" data-island="chart-lab">
         <div class="section-heading">
           <p class="kicker">PROTOTYPE &middot; TRADINGVIEW LIGHTWEIGHT CHARTS</p>
           <h1>Chart lab</h1>
@@ -144,11 +144,13 @@
       </div>
     </div>
   </footer>
-  <script src="assets/vendor/lightweight-charts.standalone.production.js"></script>
   <script src="assets/site.js?v=20261007dark39"></script>
+  <script src="assets/islands.js?v=20261008r1"></script>
   <script>
+  <script>window.NV_ISLANDS = window.NV_ISLANDS || {}; window.NV_ISLANDS['chart-lab'] = true;</script>
   (function(){
     "use strict";
+    if (window.NV_ISLANDS && window.NV_ISLANDS['chart-lab']) return;
     var API = "https://nairaview-api.meetomidiora.workers.dev";
     if (!window.LightweightCharts) return;
     var LW = window.LightweightCharts;

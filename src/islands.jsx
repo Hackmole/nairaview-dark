@@ -17,9 +17,17 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Screener from './islands/Screener.jsx';
+import ChartLab from './islands/ChartLab.jsx';
+import Portfolio from './islands/Portfolio.jsx';
+import FxConverter from './islands/FxConverter.jsx';
+import FxCcy from './islands/FxCcy.jsx';
 
 var ISLANDS = {
   screener: Screener,
+  'chart-lab': ChartLab,
+  portfolio: Portfolio,
+  'fx-converter': FxConverter,
+  'fx-ccy': FxCcy,
 };
 
 function mount() {
@@ -29,7 +37,8 @@ function mount() {
     if (!Comp || el.dataset.islandMounted) return;
     el.dataset.islandMounted = '1';
     try {
-      createRoot(el).render(React.createElement(Comp));
+      /* mount element dataset (e.g. data-ccy) is passed as props */
+      createRoot(el).render(React.createElement(Comp, Object.assign({}, el.dataset)));
     } catch (e) {
       /* leave the static content untouched on failure */
       delete el.dataset.islandMounted;

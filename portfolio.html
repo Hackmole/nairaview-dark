@@ -61,7 +61,7 @@
           <div><span class="status-pill"><span class="dot"></span>Daily close</span></div>
         </div>
 
-        <div id="portfolioApp" hidden>
+        <div id="portfolioApp" data-island="portfolio" hidden>
           <div class="facts" id="portfolioTotals">
             <div class="fact"><span>Total value</span><strong id="totValue">&mdash;</strong></div>
             <div class="fact"><span>Total cost</span><strong id="totCost">&mdash;</strong></div>
@@ -124,9 +124,12 @@
   <script src="assets/logos.js"></script>
   <script src="assets/stock-pages.js"></script>
   <script src="assets/site.js?v=20261007dark39"></script>
+  <script src="assets/islands.js?v=20261008r1"></script>
   <script src="assets/live.js?v=20261007dark39"></script>
   <script>
+  <script>window.NV_ISLANDS = window.NV_ISLANDS || {}; window.NV_ISLANDS.portfolio = true;</script>
   (function () {
+    if (window.NV_ISLANDS && window.NV_ISLANDS.portfolio) return;
     var API = 'https://nairaview-api.meetomidiora.workers.dev';
     // Snapshot prices, 5 Oct 2026 close (verified research). Live prices from
     // assets/live.js override these when the daily feed loads (more tickers too).
