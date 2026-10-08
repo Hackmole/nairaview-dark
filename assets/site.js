@@ -507,6 +507,7 @@
       function paintModalStar(s) {
         modalStar.textContent = isStarred(s) ? '★ Starred — tap to remove from watchlist' : '☆ Add to watchlist';
       }
+      window.nvOpenModal = openModal;
       function openModal(s, opener) {
         var found = findStock(s); if (!found) return;
         var r = found.row;
@@ -706,7 +707,7 @@
       }
       renderHeatmap();
       /* ---- Stock screener ---- */
-      if (document.getElementById('screenList')) {
+      if (document.getElementById('screenList') && !(window.NV_ISLANDS && window.NV_ISLANDS.screener)) {
       var scrState = { mover: 'all', sector: 'All', minP: '', maxP: '', minC: '', maxC: '', sort: 'chg-desc' };
       var screenList = document.getElementById('screenList');
       var screenCount = document.getElementById('screenCount');
