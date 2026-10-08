@@ -446,8 +446,12 @@ def main():
                 p = os.path.join(REPO, f)
                 if os.path.exists(p):
                     s = open(p, encoding="utf-8").read()
-                    s2 = re.sub(r"\?v=\d{8}[a-z]?(dark\d+)?",
-                                lambda m: f"?v={new_v}" + (m.group(1) or ""), s)
+
+                    def _bump(m):
+                        dark = re.search(r"dark(\d+)$", m.group(1))
+                        return f"?v={new_v}" + (f"dark{dark.group(1)}" if dark else "")
+
+                    s2 = re.sub(r"\?v=([^\"'&\s]+)", _bump, s)
                     if s2 != s:
                         open(p, "w", encoding="utf-8").write(s2)
         log(f"asset version bumped to {new_v}")
