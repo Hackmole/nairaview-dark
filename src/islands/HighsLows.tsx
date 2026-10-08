@@ -41,7 +41,7 @@ export default function HighsLows(): null {
 
   useEffect(() => {
     let alive = true;
-    fetch('assets/highs-lows.json')
+    fetch('assets/highs-lows.json?v=20261008a')
       .then((r) => { if (!r.ok) throw new Error('bad status'); return r.json() as Promise<HlDoc>; })
       .then((d) => { if (alive) setDoc(d); })
       .catch(() => { /* board stays empty with the note */ });

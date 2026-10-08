@@ -40,7 +40,7 @@ export default function InsiderDeals(): null {
 
   useEffect(() => {
     let alive = true;
-    fetch('assets/insider-dealings.json')
+    fetch('assets/insider-dealings.json?v=20261008a')
       .then((r) => { if (!r.ok) throw new Error('bad status'); return r.json() as Promise<InsiderDoc>; })
       .then((d) => { if (alive) setDoc(d); })
       .catch(() => { /* table stays empty */ });

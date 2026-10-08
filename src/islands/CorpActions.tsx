@@ -42,7 +42,7 @@ export default function CorpActions(): null {
 
   useEffect(() => {
     let alive = true;
-    fetch('assets/corporate-actions.json')
+    fetch('assets/corporate-actions.json?v=20261008a')
       .then((r) => { if (!r.ok) throw new Error('bad status'); return r.json() as Promise<CaDoc>; })
       .then((d) => { if (alive) setDoc(d); })
       .catch(() => { /* feed stays empty with the note */ });
