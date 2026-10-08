@@ -4,7 +4,7 @@ import type { Holding } from '../lib/types.js';
 /* React-owned portfolio tracker. Mounts on #portfolioApp.
    - Auth: GET /api/holdings (credentials: include). 401 or unreachable →
      redirect to the account page, exactly like the vanilla version.
-   - Prices: baked 5 Oct 2026 snapshot first, then live daily-close prices via
+   - Prices: baked daily-close snapshot first (refreshed by scripts/v2_refresh.py), then live daily-close prices via
      the `nv:live-prices` CustomEvent dispatched by assets/live.js.
    - CRUD: add/update form, two-step confirm delete, per-row gain/loss on
      covered holdings only.
@@ -12,9 +12,17 @@ import type { Holding } from '../lib/types.js';
 
 const API = 'https://nairaview-api.meetomidiora.workers.dev';
 const SNAPSHOT: Record<string, number> = {
-  DANGCEM: 1066.7, SEPLAT: 16000.1, GTCO: 132.2, ZENITHBANK: 135.4,
-  FIRSTHOLDCO: 150.15, UBA: 45, ACCESSCORP: 30.45, STANBIC: 164,
-  TRANSCORP: 36.25, NESTLE: 2750, NB: 73.8,
+  DANGCEM: 1066.7,
+  SEPLAT: 16000.1,
+  GTCO: 131.8,
+  ZENITHBANK: 136.5,
+  FIRSTHOLDCO: 143.65,
+  UBA: 44,
+  ACCESSCORP: 30,
+  STANBIC: 160,
+  TRANSCORP: 36,
+  NESTLE: 2750,
+  NB: 74,
 };
 
 interface HoldingsResponse { holdings?: Holding[] }
@@ -164,7 +172,7 @@ export default function Portfolio(): React.ReactElement | null {
       <p className="asof" id="priceNote">
         {liveCount
           ? 'Valued at the latest daily-close prices, refreshed after each market close. Gain/loss is calculated on covered holdings only.'
-          : 'Valued at Nairaview\u2019s 5 Oct 2026 snapshot prices — not live. Prices exist for 11 covered stocks; other holdings show cost only, and gain/loss is calculated on covered holdings only.'}
+          : 'Valued at Nairaview\u2019s latest daily-close snapshot prices — not live. Gain/loss is calculated on covered holdings only; other holdings show cost only.'}
       </p>
       <p className="form-note"><a href="account">Account settings &amp; log out</a></p>
       <div className="movers-col">
