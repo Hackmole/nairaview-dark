@@ -30,18 +30,37 @@ var ISLANDS = {
   'fx-ccy': FxCcy,
 };
 
+/* Adopt-style islands (ChartLab, FX) return null and manage existing page DOM
+   via effects. React 19's createRoot() wipes its container's children on
+   mount, so these must NEVER mount on the content element itself — they get
+   a detached holder div instead. Render-style islands (Screener, Portfolio)
+   own their container's contents and mount on it directly. */
+var ADOPT = {
+  'chart-lab': true,
+  'fx-converter': true,
+  'fx-ccy': true,
+};
+
 function mount() {
   document.querySelectorAll('[data-island]').forEach(function (el) {
     var name = el.getAttribute('data-island');
     var Comp = ISLANDS[name];
     if (!Comp || el.dataset.islandMounted) return;
     el.dataset.islandMounted = '1';
+    var host = el;
+    if (ADOPT[name]) {
+      host = document.createElement('div');
+      host.setAttribute('data-island-host', name);
+      host.style.display = 'none';
+      document.body.appendChild(host);
+    }
     try {
       /* mount element dataset (e.g. data-ccy) is passed as props */
-      createRoot(el).render(React.createElement(Comp, Object.assign({}, el.dataset)));
+      createRoot(host).render(React.createElement(Comp, Object.assign({}, el.dataset)));
     } catch (e) {
       /* leave the static content untouched on failure */
       delete el.dataset.islandMounted;
+      if (host !== el) host.remove();
     }
   });
 }
