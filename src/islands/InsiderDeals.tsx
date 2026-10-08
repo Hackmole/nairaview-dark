@@ -66,7 +66,7 @@ export default function InsiderDeals(): null {
       }).join('');
     }
     const note = document.getElementById('insiderNote');
-    if (note) note.textContent = doc.note + ' Last verified ' + fmtDate(doc.updated) + '.';
+    if (note) note.textContent = doc.note;
   }, [doc]);
 
   return null;
