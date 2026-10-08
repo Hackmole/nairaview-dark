@@ -11,7 +11,7 @@ export default defineConfig({
     outDir: 'assets',
     emptyOutDir: false,
     rollupOptions: {
-      input: 'src/islands.jsx',
+      input: 'src/islands.tsx',
       output: {
         entryFileNames: 'islands.js',
         format: 'iife',
