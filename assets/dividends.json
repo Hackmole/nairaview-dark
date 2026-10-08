@@ -59,6 +59,66 @@
    "register_closure": null,
    "source": "Investors King",
    "ticker": "TRANSPOWER"
+  },
+  {
+   "ticker": "AIRTELAFRI",
+   "company": "Airtel Africa Plc",
+   "amount": 58.59,
+   "period": "Final, FY2025/26 (declared 4.26\u00a2; naira approx.)",
+   "qualification_date": "2026-06-17",
+   "register_closure": null,
+   "payment_date": "2026-07-24",
+   "source": "airtel.africa; 9am.ng"
+  },
+  {
+   "ticker": "GUINNESS",
+   "company": "Guinness Nigeria Plc",
+   "amount": 2.0,
+   "period": "Interim, Q1 FY2026",
+   "qualification_date": "2026-04-20",
+   "register_closure": null,
+   "payment_date": null,
+   "source": "Nairametrics"
+  },
+  {
+   "ticker": "UNILEVER",
+   "company": "Unilever Nigeria Plc",
+   "amount": 2.0,
+   "period": "Interim, H1 2026",
+   "qualification_date": "2026-07-31",
+   "register_closure": null,
+   "payment_date": null,
+   "source": "ThisDay"
+  },
+  {
+   "ticker": "INTBREW",
+   "company": "International Breweries Plc",
+   "amount": 0.5,
+   "period": "Return of capital, 2026 (from share premium, not a dividend)",
+   "qualification_date": "2026-09-16",
+   "register_closure": null,
+   "payment_date": "2026-09-23",
+   "source": "Nairametrics; Punch"
+  },
+  {
+   "ticker": "HONEYWELL",
+   "company": "Honeywell Flour Mills Plc",
+   "amount": 0.2,
+   "period": "Final, FY ended 31 Mar 2026",
+   "qualification_date": "2026-08-28",
+   "register_closure": null,
+   "payment_date": "2026-09-17",
+   "source": "AfricanFinancials; Proshare"
+  },
+  {
+   "ticker": "UCAP",
+   "company": "United Capital Plc",
+   "amount": 0.3,
+   "period": "Interim, H1 2026",
+   "qualification_date": "2026-07-27",
+   "register_closure": "2026-07-28 to 2026-07-29",
+   "payment_date": "2026-07-30",
+   "source": "Investors King"
   }
  ],
  "note": "Curated from NGX disclosures and Nigerian business press (Sep-Oct 2026 research). Amounts in naira per share. Only verified items are listed.",
