@@ -1368,6 +1368,12 @@ a, button { -webkit-tap-highlight-color: transparent; }
 :root[data-theme="dark"] .heat-tile .ht-c:not(.up):not(.down) { color: var(--blue); }
 :root[data-theme="dark"] .news-sector { color: var(--gold); border-color: var(--gold); background: var(--gold-soft); }
 :root[data-theme="dark"] .section-subnav a.active { color: #022126; background: var(--blue); }
+/* Bright green hours panel: dark text for contrast (white fails on #a5ff7a) */
+:root[data-theme="dark"] .hours { color: #022126; }
+:root[data-theme="dark"] .hours .small { color: rgba(2,33,38,.72); }
+:root[data-theme="dark"] .hours p { color: rgba(2,33,38,.78); }
+:root[data-theme="dark"] .hours .session div { border-top-color: rgba(2,33,38,.35); }
+:root[data-theme="dark"] .hours .session span { color: rgba(2,33,38,.68); }
     .preset-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; align-items: center; }
     .preset-label { font: 600 11px/1 "IBM Plex Mono", monospace; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-right: 2px; }
     .preset-chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 0; padding: 8px 14px; font: 600 12px/1 "Barlow", sans-serif; cursor: pointer; }

@@ -195,7 +195,8 @@ def scan_news_candidates():
     os.makedirs(HIDDEN, exist_ok=True)
     seen = set()
     if os.path.exists(CANDIDATES):
-        seen = set(re.findall(r"^https?://\S+", open(CANDIDATES).read(), re.M))
+        # Links are stored as "- Link: https://..." (not line-leading), so match anywhere.
+        seen = set(re.findall(r"https?://\S+", open(CANDIDATES).read()))
     new = 0
     lines = []
     for it in items:

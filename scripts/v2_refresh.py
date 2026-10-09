@@ -104,6 +104,20 @@ def arrow(v):
     return "\u25b2" if v > 0 else ("\u25bc" if v < 0 else "\u2014")
 
 
+def compact_py(n):
+    """Python mirror of live.js compact(): ₦163.655tn / 708.81m / 42,434."""
+    n = float(n or 0)
+    if n >= 1e12:
+        return "\u20a6" + f"{n / 1e12:.3f}tn"
+    if n >= 1e9:
+        return "\u20a6" + f"{n / 1e9:.2f}bn"
+    if n >= 1e6:
+        return f"{n / 1e6:.2f}m"
+    if n >= 1e3:
+        return f"{n / 1e3:.1f}k"
+    return str(round(n))
+
+
 # ---------- main ----------
 def main():
     try:
@@ -243,6 +257,21 @@ def main():
     t = re.sub(r'(<div class="chart-value" id="chartValue">)[\d,\.]+(</div>)', rf"\g<1>{asi:,.2f}\g<2>", t)
     t = re.sub(r'(<div class="chart-change" id="chartChange">)[^<]*(</div>)',
                rf"\g<1>{ytd:+.2f}% since 31 Dec 2025\g<2>", t)
+    # Hero metric strip — baked fallback so the page is self-consistent on
+    # surfaces where live.js can't repaint (e.g. GitHub Pages origin has no
+    # API CORS); live.js repaints these same ids at runtime on nairaview.com.
+    mcap_s = compact_py(market.get("market_cap") or 0)
+    vol_s = compact_py(market.get("volume") or 0).replace("₦", "")
+    deals_s = f"{int(round(market.get('deals') or 0)):,}"
+    ytd_s = disp_pct(ytd)
+    t = re.sub(r'(<span class="metric-value" id="metricMcap">).*?(</span>)',
+               rf"\g<1>{mcap_s}\g<2>", t)
+    t = re.sub(r'(<span class="metric-value" id="metricVol">).*?(</span>)',
+               rf"\g<1>{vol_s}\g<2>", t)
+    t = re.sub(r'(<span class="metric-value" id="metricDeals">).*?(</span>)',
+               rf"\g<1>{deals_s}\g<2>", t)
+    t = re.sub(r'(<span class="metric-value" id="metricYtd">).*?(</span>)',
+               rf"\g<1>{ytd_s}\g<2>", t)
     t = re.sub(r'(<span id="periodLabel">)31 Dec 2025 \u2014 \d{1,2} [A-Z][a-z]{2} \d{4}(</span>)',
                rf"\g<1>31 Dec 2025 — {d_short}\g<2>", t)
     t = re.sub(r'(<span class="noteDate">)\d{1,2} [A-Z][a-z]{2} \d{4}(</span>)',
