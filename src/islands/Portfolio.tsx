@@ -14,15 +14,15 @@ const API = 'https://nairaview-api.meetomidiora.workers.dev';
 const SNAPSHOT: Record<string, number> = {
   DANGCEM: 1066.7,
   SEPLAT: 16000.1,
-  GTCO: 131.8,
-  ZENITHBANK: 136.5,
+  GTCO: 131.5,
+  ZENITHBANK: 134.7,
   FIRSTHOLDCO: 143.65,
-  UBA: 44,
-  ACCESSCORP: 30,
+  UBA: 43.3,
+  ACCESSCORP: 29.5,
   STANBIC: 160,
   TRANSCORP: 36,
   NESTLE: 2750,
-  NB: 74,
+  NB: 74.6,
 };
 
 interface HoldingsResponse { holdings?: Holding[] }

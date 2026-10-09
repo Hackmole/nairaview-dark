@@ -122,28 +122,29 @@ var asiHistory = [
         { d: '2026-10-06', label: '6 Oct 2026', v: 250273.50 },
         { d: '2026-10-07', label: '7 Oct 2026', v: 250096.75 },
         { d: '2026-10-08', label: '8 Oct 2026', v: 248042.50 },
+        { d: '2026-10-09', label: '9 Oct 2026', v: 248363.55 },
       ];
 var tables = {
         gainers: [
-          { s: 'ETRANZACT', c: 'eTranzact International Plc', p: '₦12.10', m: '+10.00%', d: 'up', pv: 12.10, cv: 10.00 , mc: 111319997773},
-          { s: 'TRIPPLEG', c: 'Tripple Gee & Company Plc', p: '₦3.09', m: '+9.71%', d: 'up', pv: 3.09, cv: 9.71 , mc: 3058815720},
-          { s: 'LIVESTOCK', c: 'Livestock Feeds Plc', p: '₦12.00', m: '+9.09%', d: 'up', pv: 12.00, cv: 9.09 , mc: 35999993016},
-          { s: 'GUINEAINS', c: 'Guinea Insurance Plc', p: '₦0.85', m: '+8.97%', d: 'up', pv: 0.85, cv: 8.97 , mc: 6751380000},
-          { s: 'LEARNAFRCA', c: 'Learn Africa Plc', p: '₦9.15', m: '+8.93%', d: 'up', pv: 9.15, cv: 8.93 , mc: 7941113437},
+          { s: 'REGALINS', c: 'Regency Alliance Insurance Plc', p: '₦0.77', m: '+10.00%', d: 'up', pv: 0.77, cv: 10.00 , mc: 12323850000},
+          { s: 'LIVESTOCK', c: 'Livestock Feeds Plc', p: '₦13.15', m: '+9.58%', d: 'up', pv: 13.15, cv: 9.58 , mc: 39449992346},
+          { s: 'GUINEAINS', c: 'Guinea Insurance Plc', p: '₦0.93', m: '+9.41%', d: 'up', pv: 0.93, cv: 9.41 , mc: 7386804000},
+          { s: 'CAP', c: 'Chemical and Allied Products Plc', p: '₦108.50', m: '+8.50%', d: 'up', pv: 108.50, cv: 8.50 , mc: 88400103750},
+          { s: 'UPDC', c: 'UPDC Plc', p: '₦4.20', m: '+7.69%', d: 'up', pv: 4.20, cv: 7.69 , mc: 77951873731},
         ],
         losers: [
-          { s: 'ARADEL', c: 'Aradel Holdings Plc', p: '₦1,377.00', m: '−10.00%', d: 'down', pv: 1377.00, cv: -10.00 , mc: 5982850683720},
-          { s: 'ETERNA', c: 'Eterna Plc', p: '₦41.40', m: '−10.00%', d: 'down', pv: 41.40, cv: -10.00 , mc: 53991588385},
-          { s: 'CUTIX', c: 'Cutix Plc', p: '₦2.22', m: '−9.02%', d: 'down', pv: 2.22, cv: -9.02 , mc: 15640539590},
-          { s: 'CMFC', c: 'DEAP Capital Management & Trust Plc', p: '₦3.65', m: '−8.98%', d: 'down', pv: 3.65, cv: -8.98 , mc: 5475000000},
-          { s: 'NPFMCRFBK', c: 'NPF Microfinance Bank Plc', p: '₦4.20', m: '−8.70%', d: 'down', pv: 4.20, cv: -8.70 , mc: 25170315807},
+          { s: 'REDSTAREX', c: 'Red Star Express Plc', p: '₦13.40', m: '−9.76%', d: 'down', pv: 13.40, cv: -9.76 , mc: 12789272568},
+          { s: 'FIDELITYBK', c: 'Fidelity Bank Plc', p: '₦21.00', m: '−8.70%', d: 'down', pv: 21.00, cv: -8.70 , mc: 1054456437951},
+          { s: 'DAARCOMM', c: 'DAAR Communications Plc', p: '₦1.38', m: '−8.00%', d: 'down', pv: 1.38, cv: -8.00 , mc: 16559999999},
+          { s: 'WAPIC', c: 'Coronation Insurance Plc', p: '₦2.30', m: '−7.26%', d: 'down', pv: 2.30, cv: -7.26 , mc: 55180862863},
+          { s: 'OMATEK', c: 'Omatek Ventures Plc', p: '₦1.34', m: '−6.94%', d: 'down', pv: 1.34, cv: -6.94 , mc: 3941997892},
         ],
         volume: [
-          { s: 'ZENITHBANK', c: 'Zenith Bank Plc', p: '—', m: '47.80m', d: 'up', pv: null, cv: 47.80, vol: true },
-          { s: 'WEMABANK', c: 'Wema Bank Plc', p: '—', m: '43.64m', d: 'up', pv: null, cv: 43.64, vol: true },
-          { s: 'ACCESSCORP', c: 'Access Holdings Plc', p: '—', m: '42.94m', d: 'up', pv: null, cv: 42.94, vol: true },
-          { s: 'FCMB', c: 'FCMB Group Plc', p: '—', m: '32.67m', d: 'up', pv: null, cv: 32.67, vol: true },
-          { s: 'MULTITREX', c: 'Multi-Trex Integrated Foods Plc', p: '—', m: '27.20m', d: 'up', pv: null, cv: 27.20, vol: true },
+          { s: 'ZENITHBANK', c: 'Zenith Bank Plc', p: '—', m: '31.69m', d: 'up', pv: null, cv: 31.69, vol: true },
+          { s: 'GTCO', c: 'Guaranty Trust Holding Company Plc', p: '—', m: '23.52m', d: 'up', pv: null, cv: 23.52, vol: true },
+          { s: 'ACCESSCORP', c: 'Access Holdings Plc', p: '—', m: '19.19m', d: 'up', pv: null, cv: 19.19, vol: true },
+          { s: 'FIDELITYBK', c: 'Fidelity Bank Plc', p: '—', m: '17.55m', d: 'up', pv: null, cv: 17.55, vol: true },
+          { s: 'GUINEAINS', c: 'Guinea Insurance Plc', p: '—', m: '13.60m', d: 'up', pv: null, cv: 13.60, vol: true },
         ]
       };
       var listNames = { gainers: 'Top gainer', losers: 'Top loser', volume: 'Most traded', directory: 'Market directory' };

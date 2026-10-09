@@ -43,7 +43,7 @@ export default function Dividends(): null {
 
   useEffect(() => {
     let alive = true;
-    fetch('assets/dividends.json?v=20261008a')
+    fetch('assets/dividends.json?v=20261009a')
       .then((r) => { if (!r.ok) throw new Error('bad status'); return r.json() as Promise<DivDoc>; })
       .then((d) => { if (alive) setDoc(d); })
       .catch(() => { /* section stays as-is */ });
