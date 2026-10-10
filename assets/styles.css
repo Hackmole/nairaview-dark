@@ -151,7 +151,7 @@
     .hero h1 { font: 700 clamp(44px, 7vw, 76px)/.92 "Barlow Semi Condensed", sans-serif; letter-spacing: -.055em; }
     /* Homepage ASI number: deliberate one-off exception to the no-gradients rule. */
     #market-heading {
-      font: 700 clamp(64px, 11vw, 136px)/.92 "Barlow Semi Condensed", sans-serif;
+      font: 700 clamp(72px, 12vw, 160px)/.92 "Barlow Semi Condensed", sans-serif;
       letter-spacing: -.055em;
       background: linear-gradient(90deg, #32D9EB 0%, #77FC49 50%, #FBE25D 100%);
       -webkit-background-clip: text;
