@@ -29,7 +29,7 @@ API = "https://nairaview-api.meetomidiora.workers.dev"
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                        "..", "assets", "img", "infographics")
 
-GREEN = "#087a4b"
+GREEN = "#77FC49"
 GOLD = "#c9a227"
 MUTED = "#9db3a4"
 WHITE = "#ffffff"

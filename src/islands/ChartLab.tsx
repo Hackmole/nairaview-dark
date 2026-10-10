@@ -60,8 +60,8 @@ function themeOpts() {
       horzLines: { color: dark ? 'rgba(255,255,255,0.06)' : 'rgba(15,23,42,0.06)' },
     },
     crosshair: {
-      vertLine: { color: dark ? '#5b6b85' : '#94a3b8', labelBackgroundColor: '#087a4b' },
-      horzLine: { color: dark ? '#5b6b85' : '#94a3b8', labelBackgroundColor: '#087a4b' },
+      vertLine: { color: dark ? '#5b6b85' : '#94a3b8', labelBackgroundColor: '#77FC49' },
+      horzLine: { color: dark ? '#5b6b85' : '#94a3b8', labelBackgroundColor: '#77FC49' },
     },
     rightPriceScale: { borderColor: dark ? 'rgba(255,255,255,0.12)' : 'rgba(15,23,42,0.12)' },
     timeScale: { borderColor: dark ? 'rgba(255,255,255,0.12)' : 'rgba(15,23,42,0.12)', timeVisible: false },

@@ -183,7 +183,7 @@ TEMPLATE = '''<!doctype html>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#087a4b" />
+  <meta name="theme-color" content="#022126" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Nairaview" />
 <meta property="og:title" content="@@OG_TITLE@@" />
