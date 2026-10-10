@@ -149,6 +149,16 @@
     h1, h2, h3, p { margin-top: 0; }
     h1 { margin: 12px 0 8px; font: 700 clamp(32px, 4.5vw, 52px)/1 "Barlow Semi Condensed", sans-serif; letter-spacing: -.04em; }
     .hero h1 { font: 700 clamp(44px, 7vw, 76px)/.92 "Barlow Semi Condensed", sans-serif; letter-spacing: -.055em; }
+    /* Homepage ASI number: deliberate one-off exception to the no-gradients rule. */
+    #market-heading {
+      font: 700 clamp(64px, 11vw, 136px)/.92 "Barlow Semi Condensed", sans-serif;
+      letter-spacing: -.055em;
+      background: linear-gradient(90deg, #32D9EB 0%, #77FC49 50%, #FBE25D 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
     .ticker-name { color: var(--muted); font-size: 16px; }
     .hero-move { display: flex; align-items: baseline; gap: 10px; margin-top: 19px; }
     .hero-move .down { color: var(--red); font: 600 17px/1 "IBM Plex Mono", monospace; }
@@ -386,6 +396,7 @@
       .hero { padding-top: 34px; gap: 25px; }
       h1 { font-size: clamp(34px, 10vw, 46px); }
       .hero h1 { font-size: clamp(44px, 16vw, 64px); }
+      #market-heading { font-size: clamp(56px, 20vw, 92px); }
       .snapshot-note { padding: 20px; }
       .metrics { grid-template-columns: 1fr 1fr; }
       .metric { padding: 17px 15px; }
@@ -651,6 +662,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .header-inner { width: calc(100% - 28px); }
   h1 { font-size: clamp(30px, 9vw, 40px); }
   .hero h1 { font-size: clamp(38px, 14vw, 50px); }
+  #market-heading { font-size: clamp(48px, 17vw, 72px); }
   .topline { font-size: 11px; gap: 12px; }
   .section { padding: 36px 0; }
   .section-heading h2 { font-size: clamp(22px, 6vw, 26px); }
@@ -732,6 +744,7 @@ a, button { -webkit-tap-highlight-color: transparent; }
   .hero { padding: 26px 0 18px; }
   h1 { font-size: clamp(28px, 8vh, 40px); }
   .hero h1 { font-size: clamp(34px, 9vh, 52px); }
+  #market-heading { font-size: clamp(44px, 12vh, 76px); }
   .section { padding: 32px 0; }
   .modal-backdrop { align-items: flex-start; }
 }
