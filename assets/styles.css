@@ -193,7 +193,7 @@
     .metric-detail { display: block; margin-top: 8px; color: var(--muted); font-size: 12px; }
     /* 11. Section sub-nav lives in the sticky market-state bar. */
     .section-subnav { display: flex; gap: 2px; }
-    .section-subnav a { color: var(--muted); text-decoration: none; font: 600 11px/1 "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .08em; padding: 8px 12px; border-radius: 0; white-space: nowrap; }
+    .section-subnav a { color: var(--muted); text-decoration: none; font: 600 9px/1 "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .08em; padding: 8px 12px; border-radius: 0; white-space: nowrap; }
     .section-subnav a:hover { color: var(--ink); background: var(--surface-2); }
     .section-subnav a.active { color: var(--green-strong); background: var(--green-soft); }
     @media (max-width: 900px) { .section-subnav { display: none; } }
