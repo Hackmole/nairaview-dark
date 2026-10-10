@@ -128,7 +128,7 @@
       z-index: 50;
       background: var(--paper);
     }
-    @media (max-width: 700px) {
+@media (max-width: 700px) {
       :root { --header-h: 124px; }
     }
     .status { display: flex; gap: 9px; align-items: center; }
@@ -495,15 +495,39 @@
 .site-nav a { font: 600 8px/1 "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); text-decoration: none; padding: 12px 10px 10px; white-space: nowrap; border-bottom: 2px solid transparent; }
 .site-nav a:hover { color: var(--ink); }
 .site-nav a.active { color: var(--green-strong); border-bottom-color: var(--green-strong); }
+/* ---- Mobile hamburger drawer (built by site.js from the nav) ---- */
+.nav-burger { display: none; }
 @media (max-width: 700px) {
-  .header-inner { flex-wrap: wrap; gap: 0; }
+  .header-inner { flex-wrap: nowrap; gap: 0; }
   .brand { order: 1; flex: 1 1 auto; }
   .theme-toggle { order: 2; margin-left: auto; align-self: center; }
-  .site-nav { order: 3; flex: 1 1 100%; flex-wrap: nowrap; overflow-x: auto; margin-left: 0; gap: 6px; padding: 4px 0 10px; scrollbar-width: none; justify-content: flex-start; }
-  .site-nav::-webkit-scrollbar { display: none; }
-  .site-nav a { border: 0; background: none; padding: 10px 8px 9px; flex: 0 0 auto; }
-  .site-nav a.active { border: 0; background: none; color: var(--green-strong); }
+  .site-nav { display: none; }
+  .nav-burger {
+    display: inline-flex; align-items: center; justify-content: center;
+    order: 3; margin-left: 10px; width: 24px; height: 24px; flex: 0 0 auto;
+    border: 0; background: none; padding: 0; color: var(--ink);
+    font-size: 17px; line-height: 1; cursor: pointer;
+  }
 }
+@media (max-width: 700px) and (pointer: coarse) {
+  .nav-burger { width: 44px; height: 44px; }
+}
+.drawer-scrim { position: fixed; inset: 0; background: rgba(2,33,38,.6); z-index: 80; opacity: 0; pointer-events: none; transition: opacity .2s; }
+body.drawer-open .drawer-scrim { opacity: 1; pointer-events: auto; }
+.nav-drawer {
+  position: fixed; top: 0; right: 0; bottom: 0; width: min(300px, 84vw); z-index: 90;
+  background: var(--surface); border-left: 1px solid var(--line);
+  transform: translateX(102%); transition: transform .25s ease;
+  overflow-y: auto; padding: 0 0 32px;
+}
+body.drawer-open .nav-drawer { transform: translateX(0); }
+body.drawer-open { overflow: hidden; }
+.d-head { display: flex; align-items: center; justify-content: flex-end; padding: 8px 10px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--surface); }
+.d-close { border: 0; background: none; color: var(--muted); font-size: 18px; line-height: 1; padding: 10px 12px; cursor: pointer; }
+.d-sec { display: block; padding: 13px 20px 5px; font: 600 10px/1.4 "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .12em; color: var(--ink); text-decoration: none; }
+.d-sec.on { color: var(--green-strong); }
+.d-sub { display: block; padding: 7px 20px 7px 32px; font-size: 14px; line-height: 1.4; color: var(--muted); text-decoration: none; }
+.d-sub.on { color: var(--green-strong); }
 .page-kicker { margin: 26px 0 0; }
 
 /* IPO guide */

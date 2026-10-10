@@ -1022,3 +1022,63 @@
     if (plink) plink.classList.add('active');
   }
 }());
+
+/* ---- Mobile hamburger drawer: clones the desktop nav into a slide-in panel ---- */
+(function () {
+  var nav = document.querySelector('.site-nav');
+  var header = document.querySelector('.header-inner');
+  if (!nav || !header || header.querySelector('.nav-burger')) return;
+  var burger = document.createElement('button');
+  burger.type = 'button'; burger.className = 'nav-burger';
+  burger.setAttribute('aria-label', 'Open menu'); burger.setAttribute('aria-expanded', 'false');
+  burger.textContent = '\u2630';
+  header.appendChild(burger);
+  var scrim = document.createElement('div');
+  scrim.className = 'drawer-scrim'; scrim.setAttribute('aria-hidden', 'true');
+  var drawer = document.createElement('nav');
+  drawer.className = 'nav-drawer'; drawer.setAttribute('aria-label', 'Mobile');
+  var head = document.createElement('div'); head.className = 'd-head';
+  var close = document.createElement('button');
+  close.type = 'button'; close.className = 'd-close';
+  close.setAttribute('aria-label', 'Close menu'); close.textContent = '\u2715';
+  head.appendChild(close); drawer.appendChild(head);
+  function linkEl(text, href, cls) {
+    var a = document.createElement('a');
+    a.className = cls; a.setAttribute('href', href); a.textContent = text;
+    return a;
+  }
+  Array.prototype.forEach.call(nav.children, function (node) {
+    if (node.classList && node.classList.contains('nav-item')) {
+      var plink = node.querySelector(':scope > a');
+      if (!plink) return;
+      drawer.appendChild(linkEl(plink.textContent, plink.getAttribute('href'),
+        'd-sec' + (plink.classList.contains('active') ? ' on' : '')));
+      Array.prototype.forEach.call(node.querySelectorAll(':scope > .nav-dropdown a'), function (s) {
+        drawer.appendChild(linkEl(s.textContent, s.getAttribute('href'),
+          'd-sub' + (s.classList.contains('active') ? ' on' : '')));
+      });
+    } else if (node.tagName === 'A') {
+      drawer.appendChild(linkEl(node.textContent, node.getAttribute('href'),
+        'd-sec' + (node.classList.contains('active') ? ' on' : '')));
+    }
+  });
+  document.body.appendChild(scrim);
+  document.body.appendChild(drawer);
+  function open() {
+    document.body.classList.add('drawer-open');
+    burger.setAttribute('aria-expanded', 'true');
+    burger.textContent = '\u2715';
+  }
+  function shut() {
+    document.body.classList.remove('drawer-open');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.textContent = '\u2630';
+  }
+  burger.addEventListener('click', function () {
+    if (document.body.classList.contains('drawer-open')) shut(); else open();
+  });
+  close.addEventListener('click', shut);
+  scrim.addEventListener('click', shut);
+  drawer.addEventListener('click', function (e) { if (e.target.closest('a')) shut(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') shut(); });
+}());
